@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BR27 - {{ profile.user.get_full_name }}'s Profile{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+        <div class="mb-6">
+            <a href="{% url 'village_detail' profile.village.id %}" class="text-blue-600 hover:text-blue-800">
+                &larr; Back to {{ profile.village.name }}
+            </a>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-6">
+                <div class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6">
+                    <div class="flex-shrink-0">
+                        {% if profile.profile_picture %}
+                        <img src="{{ profile.profile_picture.url }}" alt="{{ profile.user.get_full_name }}" 
+                             class="w-48 h-48 rounded-full object-cover">
+                        {% else %}
+                        <div class="w-48 h-48 rounded-full bg-gray-200 flex items-center justify-center">
+                            <span class="text-gray-500 text-6xl">{{ profile.user.get_full_name|first }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="flex-grow">
+                        <h1 class="text-3xl font-bold text-gray-900 mb-2">{{ profile.user.get_full_name }}</h1>
+                        <p class="text-xl text-gray-600 mb-4">{{ profile.occupation }}</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-900 mb-2">Contact Information</h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><strong>Email:</strong> {{ profile.user.email }}</li>
+                                    {% if profile.phone_number %}
+                                    <li><strong>Phone:</strong> {{ profile.phone_number }}</li>
+                                    {% endif %}
+                                    <li><strong>Address:</strong> {{ profile.address }}</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-900 mb-2">Location</h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><strong>Village:</strong> {{ profile.village.name }}</li>
+                                    <li><strong>Gram Panchayat:</strong> {{ profile.village.gram_panchayat.name }}</li>
+                                    <li><strong>Block:</strong> {{ profile.village.gram_panchayat.block.name }}</li>
+                                    <li><strong>Subdivision:</strong> {{ profile.village.gram_panchayat.block.subdivision.name }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200">
+                <div class="p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-900 mb-2">Hobbies & Interests</h3>
+                            <p class="text-gray-600">{{ profile.hobbies|default:"No hobbies listed" }}</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-900 mb-2">Achievements</h3>
+                            <p class="text-gray-600">{{ profile.achievements|default:"No achievements listed" }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% if user == profile.user %}
+            <div class="border-t border-gray-200 p-6">
+                <div class="flex justify-end">
+                    <a href="{% url 'profile_edit' profile.id %}" 
+                       class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300">
+                        Edit Profile
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %} 

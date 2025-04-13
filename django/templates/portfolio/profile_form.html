@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BR27 - {% if profile %}Edit{% else %}Create{% endif %} Profile{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-900">
+                {% if profile %}Edit{% else %}Create{% endif %} Your Profile
+            </h1>
+            <p class="mt-2 text-gray-600">
+                {% if profile %}
+                Update your profile information for {{ profile.village.name }}
+                {% else %}
+                Create your profile for {{ village.name }}
+                {% endif %}
+            </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <form method="post" enctype="multipart/form-data" class="space-y-6">
+                {% csrf_token %}
+                
+                {% for field in form %}
+                <div>
+                    <label for="{{ field.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                        {{ field.label }}
+                    </label>
+                    {{ field }}
+                    {% if field.help_text %}
+                    <p class="mt-1 text-sm text-gray-500">{{ field.help_text }}</p>
+                    {% endif %}
+                    {% if field.errors %}
+                    <div class="mt-1 text-sm text-red-600">
+                        {{ field.errors }}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+
+                <div class="flex justify-end space-x-4">
+                    <a href="{% if profile %}{% url 'profile_detail' profile.id %}{% else %}{% url 'village_detail' village.id %}{% endif %}" 
+                       class="inline-block bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors duration-300">
+                        Cancel
+                    </a>
+                    <button type="submit" 
+                            class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300">
+                        {% if profile %}Save Changes{% else %}Create Profile{% endif %}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %} 
