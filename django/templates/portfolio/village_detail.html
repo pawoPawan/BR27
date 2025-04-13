@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BR27 - {{ village.name }}{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-900">{{ village.name }}</h1>
+        <p class="mt-2 text-gray-600">{{ village.description }}</p>
+    </div>
+
+    <div class="mb-6">
+        <a href="{% url 'village_list' village.gram_panchayat.id %}" class="text-blue-600 hover:text-blue-800">
+            &larr; Back to {{ village.gram_panchayat.name }}
+        </a>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4">Village Information</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">Administrative Details</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li><strong>Gram Panchayat:</strong> {{ village.gram_panchayat.name }}</li>
+                    <li><strong>Block:</strong> {{ village.gram_panchayat.block.name }}</li>
+                    <li><strong>Subdivision:</strong> {{ village.gram_panchayat.block.subdivision.name }}</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">Statistics</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li><strong>Total Residents:</strong> {{ residents.count }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-8">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4">Village Residents</h2>
+        {% if user.is_authenticated %}
+        <div class="mb-6">
+            <a href="{% url 'profile_create' village.id %}" 
+               class="inline-block bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors duration-300">
+                Create Your Profile
+            </a>
+        </div>
+        {% endif %}
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for resident in residents %}
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="p-6">
+                    {% if resident.profile_picture %}
+                    <img src="{{ resident.profile_picture.url }}" alt="{{ resident.user.get_full_name }}" 
+                         class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    {% else %}
+                    <div class="w-32 h-32 rounded-full mx-auto mb-4 bg-gray-200 flex items-center justify-center">
+                        <span class="text-gray-500 text-4xl">{{ resident.user.get_full_name|first }}</span>
+                    </div>
+                    {% endif %}
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ resident.user.get_full_name }}</h3>
+                    <p class="text-gray-600 mb-2">{{ resident.occupation }}</p>
+                    <a href="{% url 'profile_detail' resident.id %}" 
+                       class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300">
+                        View Profile
+                    </a>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-span-full text-center py-8">
+                <p class="text-gray-600">No resident profiles available yet.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %} 

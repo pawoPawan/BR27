@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BR27 - Subdivisions{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-900">BR27 - Nawada District</h1>
+        <p class="mt-2 text-gray-600">Explore the administrative divisions of BR27</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for subdivision in subdivisions %}
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-2">{{ subdivision.name }}</h2>
+                <p class="text-gray-600 mb-4">{{ subdivision.description }}</p>
+                <a href="{% url 'block_list' subdivision.id %}" 
+                   class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300">
+                    View Blocks
+                </a>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-span-full text-center py-8">
+            <p class="text-gray-600">No subdivisions available.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %} 

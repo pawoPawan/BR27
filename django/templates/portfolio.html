@@ -1,0 +1,287 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Portfolio - SkyTech Drones{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<header class="pt-32 pb-16 bg-gradient-to-r from-blue-600 to-indigo-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl font-bold text-white mb-4">Executive Portfolio</h1>
+        <p class="text-xl text-blue-100">Meet our leadership team driving innovation in agricultural and logistics drone technology</p>
+    </div>
+</header>
+
+<!-- Executive Team -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900">Executive Team</h2>
+            <p class="text-xl text-gray-600 mt-2">Leadership with vision and expertise</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% if executives %}
+                {% for executive in executives %}
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        {% if executive.profile_image %}
+                            <img src="{{ executive.profile_image.url }}" alt="{{ executive.name }}" class="w-full h-full object-cover">
+                        {% else %}
+                            <img src="{% static 'images/about-us.jpg' %}" alt="{{ executive.name }}" class="w-full h-full object-cover">
+                        {% endif %}
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">{{ executive.name }}</h3>
+                        <p class="text-blue-600">{{ executive.title }}</p>
+                        <p class="text-gray-600 mt-2">{{ executive.about|truncatewords:30 }}</p>
+                        <div class="mt-4">
+                            <a href="{{ executive.profile_url }}" target="_blank" class="text-blue-600 hover:underline">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <!-- CEO -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        <img src="{% static 'images/about-us.jpg' %}" alt="CEO" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">John Smith</h3>
+                        <p class="text-blue-600">Chief Executive Officer</p>
+                        <p class="text-gray-600 mt-2">20+ years of experience in agricultural technology and drone innovation. Former Director of Agricultural Technology at TechCorp.</p>
+                        <div class="mt-4">
+                            <a href="#" class="text-blue-600 hover:underline">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTO -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        <img src="{% static 'images/about-us.jpg' %}" alt="CTO" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Sarah Johnson</h3>
+                        <p class="text-blue-600">Chief Technology Officer</p>
+                        <p class="text-gray-600 mt-2">PhD in Robotics and Autonomous Systems. Pioneer in agricultural drone automation and precision farming technologies.</p>
+                        <div class="mt-4">
+                            <a href="#" class="text-blue-600 hover:underline">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COO -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        <img src="{% static 'images/about-us.jpg' %}" alt="COO" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Michael Chen</h3>
+                        <p class="text-blue-600">Chief Operations Officer</p>
+                        <p class="text-gray-600 mt-2">Expert in logistics optimization and supply chain management. Former Head of Operations at Global Logistics Solutions.</p>
+                        <div class="mt-4">
+                            <a href="#" class="text-blue-600 hover:underline">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Agricultural Expertise -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900">Agricultural Expertise</h2>
+            <p class="text-xl text-gray-600 mt-2">Specialists in precision agriculture</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {% if agri_experts %}
+                {% for expert in agri_experts %}
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        {% if expert.profile_image %}
+                            <img src="{{ expert.profile_image.url }}" alt="{{ expert.name }}" class="w-full h-full object-cover">
+                        {% else %}
+                            <img src="{% static 'images/about-us.jpg' %}" alt="{{ expert.name }}" class="w-full h-full object-cover">
+                        {% endif %}
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">{{ expert.name }}</h3>
+                        <p class="text-blue-600">{{ expert.title }}</p>
+                        <p class="text-gray-600 mt-2">{{ expert.about|truncatewords:30 }}</p>
+                        <div class="mt-4">
+                            <a href="{{ expert.profile_url }}" target="_blank" class="text-blue-600 hover:underline">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <!-- Agricultural Director -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        <img src="{% static 'images/about-us.jpg' %}" alt="Agricultural Director" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Dr. Emily Brown</h3>
+                        <p class="text-blue-600">Director of Agricultural Solutions</p>
+                        <p class="text-gray-600 mt-2">PhD in Agricultural Sciences. Expert in crop monitoring, soil analysis, and precision farming technologies.</p>
+                        <div class="mt-4">
+                            <a href="#" class="text-blue-600 hover:underline">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Lead -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        <img src="{% static 'images/about-us.jpg' %}" alt="Research Lead" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Dr. Robert Wilson</h3>
+                        <p class="text-blue-600">Lead Agricultural Researcher</p>
+                        <p class="text-gray-600 mt-2">Specialist in drone-based crop monitoring and disease detection. Published researcher in agricultural technology.</p>
+                        <div class="mt-4">
+                            <a href="#" class="text-blue-600 hover:underline">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Logistics Expertise -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900">Logistics Expertise</h2>
+            <p class="text-xl text-gray-600 mt-2">Leaders in drone delivery solutions</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {% if logistics_experts %}
+                {% for expert in logistics_experts %}
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        {% if expert.profile_image %}
+                            <img src="{{ expert.profile_image.url }}" alt="{{ expert.name }}" class="w-full h-full object-cover">
+                        {% else %}
+                            <img src="{% static 'images/about-us.jpg' %}" alt="{{ expert.name }}" class="w-full h-full object-cover">
+                        {% endif %}
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">{{ expert.name }}</h3>
+                        <p class="text-blue-600">{{ expert.title }}</p>
+                        <p class="text-gray-600 mt-2">{{ expert.about|truncatewords:30 }}</p>
+                        <div class="mt-4">
+                            <a href="{{ expert.profile_url }}" target="_blank" class="text-blue-600 hover:underline">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <!-- Logistics Director -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        <img src="{% static 'images/about-us.jpg' %}" alt="Logistics Director" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Lisa Martinez</h3>
+                        <p class="text-blue-600">Director of Logistics Solutions</p>
+                        <p class="text-gray-600 mt-2">15+ years in logistics and supply chain optimization. Expert in last-mile delivery solutions and route optimization.</p>
+                        <div class="mt-4">
+                            <a href="#" class="text-blue-600 hover:underline">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Operations Lead -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        <img src="{% static 'images/about-us.jpg' %}" alt="Operations Lead" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">David Kim</h3>
+                        <p class="text-blue-600">Lead Operations Manager</p>
+                        <p class="text-gray-600 mt-2">Specialist in drone fleet management and delivery operations. Certified in aviation safety and regulations.</p>
+                        <div class="mt-4">
+                            <a href="#" class="text-blue-600 hover:underline">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Technical Team -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900">Technical Team</h2>
+            <p class="text-xl text-gray-600 mt-2">Innovators behind our technology</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% if technical_team %}
+                {% for member in technical_team %}
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        {% if member.profile_image %}
+                            <img src="{{ member.profile_image.url }}" alt="{{ member.name }}" class="w-full h-full object-cover">
+                        {% else %}
+                            <img src="{% static 'images/about-us.jpg' %}" alt="{{ member.name }}" class="w-full h-full object-cover">
+                        {% endif %}
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">{{ member.name }}</h3>
+                        <p class="text-blue-600">{{ member.title }}</p>
+                        <p class="text-gray-600 mt-2">{{ member.about|truncatewords:30 }}</p>
+                        <div class="mt-4">
+                            <a href="{{ member.profile_url }}" target="_blank" class="text-blue-600 hover:underline">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <!-- Software Lead -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        <img src="{% static 'images/about-us.jpg' %}" alt="Software Lead" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Alex Thompson</h3>
+                        <p class="text-blue-600">Lead Software Engineer</p>
+                        <p class="text-gray-600 mt-2">Expert in drone control systems and autonomous navigation algorithms.</p>
+                    </div>
+                </div>
+
+                <!-- Hardware Lead -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        <img src="{% static 'images/about-us.jpg' %}" alt="Hardware Lead" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Maria Garcia</h3>
+                        <p class="text-blue-600">Lead Hardware Engineer</p>
+                        <p class="text-gray-600 mt-2">Specialist in drone design and manufacturing, focusing on agricultural applications.</p>
+                    </div>
+                </div>
+
+                <!-- Data Science Lead -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-gray-200">
+                        <img src="{% static 'images/about-us.jpg' %}" alt="Data Science Lead" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">James Wilson</h3>
+                        <p class="text-blue-600">Lead Data Scientist</p>
+                        <p class="text-gray-600 mt-2">Expert in agricultural data analysis and machine learning for crop monitoring.</p>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %} 

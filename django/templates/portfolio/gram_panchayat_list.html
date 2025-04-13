@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BR27 - {{ block.name }} Gram Panchayats{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-900">{{ block.name }}</h1>
+        <p class="mt-2 text-gray-600">Explore the gram panchayats in {{ block.name }}</p>
+    </div>
+
+    <div class="mb-6">
+        <a href="{% url 'block_list' block.subdivision.id %}" class="text-blue-600 hover:text-blue-800">
+            &larr; Back to {{ block.subdivision.name }}
+        </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for gram_panchayat in gram_panchayats %}
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-2">{{ gram_panchayat.name }}</h2>
+                <p class="text-gray-600 mb-4">{{ gram_panchayat.description }}</p>
+                <a href="{% url 'village_list' gram_panchayat.id %}" 
+                   class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300">
+                    View Villages
+                </a>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-span-full text-center py-8">
+            <p class="text-gray-600">No gram panchayats available in this block.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %} 
