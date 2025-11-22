@@ -330,5 +330,5 @@ console.log('%cBR27', 'font-size: 48px; font-weight: bold; background: linear-gr
 console.log('%cEmpowering minds. Enabling progress.', 'font-size: 16px; color: #667eea;');
 console.log('%c🚀 Building a confident, future-ready ecosystem — one idea at a time.', 'font-size: 14px; color: #a0a0b0;');
 console.log('%c📧 Contact: pawanyadavvnit@gmail.com', 'font-size: 12px; color: #a0a0b0;');
-console.log('%c🌐 GitHub: https://github.com/pawoPawan', 'font-size: 12px; color: #a0a0b0;');
+console.log('%c💼 LinkedIn: https://www.linkedin.com/in/pawan-kumar-709911105/', 'font-size: 12px; color: #a0a0b0;');
 
