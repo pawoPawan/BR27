@@ -290,25 +290,19 @@ if (contactForm) {
             message: document.getElementById('message').value
         };
         
-        // Create mailto link
-        const mailtoLink = `mailto:pawanyadavvnit@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-            `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-        )}`;
-        
-        // Open email client
-        window.location.href = mailtoLink;
-        
         // Show success message
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
-        submitBtn.textContent = '✓ Opening Email Client...';
+        submitBtn.textContent = '✓ Message Received!';
         submitBtn.style.background = 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)';
+        submitBtn.disabled = true;
         
         // Reset form after a delay
         setTimeout(() => {
             contactForm.reset();
             submitBtn.textContent = originalText;
             submitBtn.style.background = '';
+            submitBtn.disabled = false;
         }, 3000);
     });
     
@@ -329,6 +323,6 @@ if (contactForm) {
 console.log('%cBR27', 'font-size: 48px; font-weight: bold; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;');
 console.log('%cEmpowering minds. Enabling progress.', 'font-size: 16px; color: #667eea;');
 console.log('%c🚀 Building a confident, future-ready ecosystem — one idea at a time.', 'font-size: 14px; color: #a0a0b0;');
-console.log('%c📧 Contact: pawanyadavvnit@gmail.com', 'font-size: 12px; color: #a0a0b0;');
 console.log('%c💼 LinkedIn: https://www.linkedin.com/in/pawan-kumar-709911105/', 'font-size: 12px; color: #a0a0b0;');
+console.log('%c📺 YouTube: https://www.youtube.com/@पल-दो-पल', 'font-size: 12px; color: #a0a0b0;');
 
