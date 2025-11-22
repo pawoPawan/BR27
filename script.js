@@ -319,6 +319,37 @@ if (contactForm) {
     });
 }
 
+// ===== YouTube Video Section =====
+// Load channel videos or playlists
+function loadChannelVideos() {
+    const iframe = document.getElementById('featuredVideo');
+    if (iframe) {
+        iframe.src = 'https://www.youtube.com/embed?listType=user_uploads&list=@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2';
+        scrollToVideo();
+    }
+}
+
+function loadPlaylist(type) {
+    const iframe = document.getElementById('featuredVideo');
+    if (iframe) {
+        // Load channel's latest videos
+        if (type === 'recent') {
+            iframe.src = 'https://www.youtube.com/embed?listType=user_uploads&list=@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2';
+        } else if (type === 'popular') {
+            // Load popular videos from channel
+            iframe.src = 'https://www.youtube.com/embed?listType=user_uploads&list=@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2';
+        }
+        scrollToVideo();
+    }
+}
+
+function scrollToVideo() {
+    const videoSection = document.querySelector('.featured-video');
+    if (videoSection) {
+        videoSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
 // ===== Console Message =====
 console.log('%cBR27', 'font-size: 48px; font-weight: bold; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;');
 console.log('%cEmpowering minds. Enabling progress.', 'font-size: 16px; color: #667eea;');
