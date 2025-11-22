@@ -275,35 +275,66 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ===== Contact Form Handling =====
+// ===== Contact Form Handling with Formspree =====
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Get form data
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
-        
-        // Show success message
         const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const formStatus = document.getElementById('form-status');
         const originalText = submitBtn.textContent;
-        submitBtn.textContent = '✓ Message Received!';
-        submitBtn.style.background = 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)';
-        submitBtn.disabled = true;
         
-        // Reset form after a delay
-        setTimeout(() => {
-            contactForm.reset();
+        // Show loading state
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        formStatus.textContent = '';
+        
+        try {
+            // Get form data
+            const formData = new FormData(contactForm);
+            
+            // Send to Formspree
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Success
+                submitBtn.textContent = '✓ Message Sent!';
+                submitBtn.style.background = 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)';
+                formStatus.textContent = 'Thank you! Your message has been sent successfully.';
+                formStatus.className = 'form-status success';
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Reset button after delay
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = '';
+                    submitBtn.disabled = false;
+                    formStatus.textContent = '';
+                }, 5000);
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            // Error handling
             submitBtn.textContent = originalText;
-            submitBtn.style.background = '';
             submitBtn.disabled = false;
-        }, 3000);
+            formStatus.textContent = 'Oops! There was a problem sending your message. Please try again.';
+            formStatus.className = 'form-status error';
+            
+            setTimeout(() => {
+                formStatus.textContent = '';
+            }, 5000);
+        }
     });
     
     // Add input animations
@@ -317,37 +348,6 @@ if (contactForm) {
             this.parentElement.style.transform = 'translateX(0)';
         });
     });
-}
-
-// ===== YouTube Video Section =====
-// Load channel videos or playlists
-function loadChannelVideos() {
-    const iframe = document.getElementById('featuredVideo');
-    if (iframe) {
-        iframe.src = 'https://www.youtube.com/embed?listType=user_uploads&list=@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2';
-        scrollToVideo();
-    }
-}
-
-function loadPlaylist(type) {
-    const iframe = document.getElementById('featuredVideo');
-    if (iframe) {
-        // Load channel's latest videos
-        if (type === 'recent') {
-            iframe.src = 'https://www.youtube.com/embed?listType=user_uploads&list=@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2';
-        } else if (type === 'popular') {
-            // Load popular videos from channel
-            iframe.src = 'https://www.youtube.com/embed?listType=user_uploads&list=@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2';
-        }
-        scrollToVideo();
-    }
-}
-
-function scrollToVideo() {
-    const videoSection = document.querySelector('.featured-video');
-    if (videoSection) {
-        videoSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
 }
 
 // ===== Console Message =====

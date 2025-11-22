@@ -533,149 +533,6 @@ section {
     font-size: 15px;
 }
 
-/* ===== YouTube Section ===== */
-.youtube-section {
-    background: var(--dark-surface);
-    padding: 100px 0;
-}
-
-.youtube-content {
-    margin-top: 60px;
-}
-
-.featured-video {
-    margin-bottom: 80px;
-}
-
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    margin-bottom: 30px;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 20px;
-}
-
-.video-info {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.video-info h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 28px;
-    margin-bottom: 16px;
-    font-weight: 600;
-}
-
-.video-info p {
-    color: var(--text-secondary);
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.channel-section {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 50px;
-}
-
-.channel-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 40px;
-    font-weight: 600;
-}
-
-.channel-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-.channel-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 35px;
-    text-align: center;
-    transition: var(--transition);
-    cursor: pointer;
-}
-
-.channel-card:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(102, 126, 234, 0.5);
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
-}
-
-.channel-icon {
-    width: 70px;
-    height: 70px;
-    background: var(--gradient-1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    transition: var(--transition);
-}
-
-.channel-card:hover .channel-icon {
-    transform: scale(1.1) rotate(5deg);
-}
-
-.channel-icon svg {
-    width: 35px;
-    height: 35px;
-    color: white;
-}
-
-.channel-card h4 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.channel-card p {
-    color: var(--text-secondary);
-    font-size: 14px;
-}
-
-.channel-cta {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.channel-cta .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.channel-cta .btn svg {
-    margin-right: 5px;
-}
-
 /* ===== Impact Section ===== */
 .impact {
     background: linear-gradient(180deg, var(--dark-surface) 0%, var(--dark-bg) 100%);
@@ -910,6 +767,27 @@ section {
 .contact-form button[type="submit"] {
     width: 100%;
     margin-top: 8px;
+}
+
+.form-status {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.form-status.success {
+    background: rgba(67, 233, 123, 0.1);
+    border: 1px solid rgba(67, 233, 123, 0.3);
+    color: #43e97b;
+}
+
+.form-status.error {
+    background: rgba(245, 87, 108, 0.1);
+    border: 1px solid rgba(245, 87, 108, 0.3);
+    color: #f5576c;
 }
 
 /* ===== CTA Section ===== */
@@ -1171,27 +1049,6 @@ section {
 
     .focus-grid {
         grid-template-columns: 1fr;
-    }
-
-    .channel-section {
-        padding: 30px 20px;
-    }
-
-    .channel-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .channel-title {
-        font-size: 24px;
-    }
-
-    .channel-cta {
-        flex-direction: column;
-    }
-
-    .channel-cta .btn {
-        width: 100%;
-        justify-content: center;
     }
 
     .stats-grid {

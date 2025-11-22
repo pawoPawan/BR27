@@ -21,7 +21,6 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#focus" class="nav-link">Focus Areas</a></li>
-                <li><a href="#videos" class="nav-link">Videos</a></li>
                 <li><a href="#impact" class="nav-link">Impact</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -190,86 +189,6 @@
         </div>
     </section>
 
-    <!-- YouTube Section -->
-    <section id="videos" class="youtube-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Watch & Learn</span>
-                <h2 class="section-title">Latest Videos</h2>
-                <p class="section-description">Explore our content on technology, governance, skills, and empowerment</p>
-            </div>
-            
-            <div class="youtube-content">
-                <!-- Featured Video -->
-                <div class="featured-video">
-                    <div class="video-wrapper">
-                        <iframe 
-                            id="featuredVideo"
-                            src="https://www.youtube.com/embed?listType=user_uploads&list=@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>Featured Content</h3>
-                        <p>Watch our latest videos on empowering minds through knowledge and practical insights. Subscribe to stay updated with new content!</p>
-                    </div>
-                </div>
-
-                <!-- Channel Grid -->
-                <div class="channel-section">
-                    <h3 class="channel-title">Explore More Videos</h3>
-                    <div class="channel-grid">
-                        <div class="channel-card" onclick="loadChannelVideos()">
-                            <div class="channel-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                                </svg>
-                            </div>
-                            <h4>All Videos</h4>
-                            <p>Browse all content from our channel</p>
-                        </div>
-                        
-                        <div class="channel-card" onclick="loadPlaylist('popular')">
-                            <div class="channel-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                                </svg>
-                            </div>
-                            <h4>Popular Videos</h4>
-                            <p>Most watched content</p>
-                        </div>
-                        
-                        <div class="channel-card" onclick="loadPlaylist('recent')">
-                            <div class="channel-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polyline points="12 6 12 12 16 14"/>
-                                </svg>
-                            </div>
-                            <h4>Recent Uploads</h4>
-                            <p>Latest videos from the channel</p>
-                        </div>
-                    </div>
-                    
-                    <div class="channel-cta">
-                        <a href="https://www.youtube.com/@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                            </svg>
-                            Subscribe to Channel
-                        </a>
-                        <a href="https://www.youtube.com/@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2/videos" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">
-                            View All Videos
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Impact Section -->
     <section id="impact" class="impact">
         <div class="container">
@@ -359,7 +278,7 @@
                     </div>
                 </div>
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xwpkglgl" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" placeholder="Your full name" required>
@@ -376,6 +295,7 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="5" placeholder="Tell us more..." required></textarea>
                         </div>
+                        <div id="form-status" class="form-status"></div>
                         <button type="submit" class="btn btn-primary btn-large">Send Message</button>
                     </form>
                 </div>
