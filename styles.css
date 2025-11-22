@@ -571,29 +571,102 @@ section {
 .linkedin-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
-    min-height: 200px;
+    padding: 40px;
 }
 
-/* LinkedIn Badge Styling Override */
-.linkedin-card .badge-base {
-    width: 100% !important;
-    max-width: 100% !important;
+.linkedin-profile-container {
+    width: 100%;
 }
 
-.linkedin-card .LI-profile-badge {
-    margin: 0 auto;
+.linkedin-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
 }
 
-.linkedin-card iframe {
-    border-radius: 12px !important;
+.linkedin-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(102, 126, 234, 0.3);
+    flex-shrink: 0;
+    background: rgba(102, 126, 234, 0.1);
 }
 
-/* Hide loading link with transition */
-.badge-base__link {
-    opacity: 1;
-    transition: opacity 0.3s ease;
+.linkedin-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.linkedin-info {
+    flex: 1;
+}
+
+.linkedin-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+}
+
+.linkedin-headline {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.linkedin-connect-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: #0077B5;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: var(--transition);
+    width: 100%;
+    justify-content: center;
+}
+
+.linkedin-connect-btn:hover {
+    background: #006399;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 119, 181, 0.3);
+}
+
+.linkedin-connect-btn svg {
+    flex-shrink: 0;
+}
+
+/* Responsive LinkedIn Card */
+@media (max-width: 640px) {
+    .linkedin-profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .linkedin-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .linkedin-name {
+        font-size: 20px;
+    }
+    
+    .linkedin-headline {
+        font-size: 13px;
+    }
 }
 
 .info-icon {

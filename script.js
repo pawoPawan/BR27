@@ -350,45 +350,6 @@ if (contactForm) {
     });
 }
 
-// ===== LinkedIn Badge Loading Handler =====
-// Hide loading text once LinkedIn badge iframe loads
-function hideLinkedInLoading() {
-    const linkedInBadge = document.querySelector('.LI-profile-badge');
-    const loadingLink = document.querySelector('.badge-base__link');
-    
-    if (linkedInBadge && loadingLink) {
-        // Check for iframe (badge loaded)
-        const checkIframe = setInterval(() => {
-            const iframe = linkedInBadge.querySelector('iframe');
-            if (iframe) {
-                // Hide the loading link
-                loadingLink.style.display = 'none';
-                clearInterval(checkIframe);
-            }
-        }, 100);
-        
-        // Fallback: hide after 5 seconds even if iframe not detected
-        setTimeout(() => {
-            if (loadingLink) {
-                loadingLink.style.display = 'none';
-            }
-            clearInterval(checkIframe);
-        }, 5000);
-    }
-}
-
-// Run when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', hideLinkedInLoading);
-} else {
-    hideLinkedInLoading();
-}
-
-// Also run when LinkedIn script loads
-window.addEventListener('load', () => {
-    setTimeout(hideLinkedInLoading, 500);
-});
-
 // ===== Console Message =====
 console.log('%cBR27', 'font-size: 48px; font-weight: bold; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;');
 console.log('%cEmpowering minds. Enabling progress.', 'font-size: 16px; color: #667eea;');
