@@ -352,6 +352,104 @@ section {
     line-height: 1.8;
 }
 
+/* ===== About Me Section ===== */
+.about-me-section {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-me-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 900px;
+    width: 100%;
+    transition: var(--transition);
+}
+
+.about-me-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(102, 126, 234, 0.5);
+}
+
+.about-me-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.about-me-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.about-me-icon svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.about-me-header h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.about-me-text {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.about-me-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.about-me-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-me-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 50px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.about-me-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+.about-me-link:hover {
+    background: var(--gradient-1);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
 /* ===== Focus Areas Section ===== */
 .focus {
     background: var(--dark-surface);
@@ -904,6 +1002,28 @@ section {
 
     .about-content {
         grid-template-columns: 1fr;
+    }
+
+    .about-me-card {
+        padding: 30px;
+    }
+
+    .about-me-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-me-header h3 {
+        font-size: 24px;
+    }
+
+    .about-me-links {
+        flex-direction: column;
+    }
+
+    .about-me-link {
+        width: 100%;
+        justify-content: center;
     }
 
     .focus-grid {
