@@ -557,7 +557,7 @@ openssl s_client -connect br27.in:443
 ## 📞 Support & Contact
 
 **Developer:** Pawan Kumar
-**Email:** pawanyadavvnit@gmail.com
+**Email:** pkrtds03@gmail.com
 **GitHub:** [@pawoPawan](https://github.com/pawoPawan)
 **Website:** [br27.in](https://br27.in)
 
@@ -629,7 +629,7 @@ Your BR27 website is **production-ready** and waiting to empower minds worldwide
 ---
 
 🌐 **Soon live at:** [https://br27.in](https://br27.in)  
-📧 **Contact:** pawanyadavvnit@gmail.com  
+📧 **Contact:** pkrtds03@gmail.com  
 💻 **GitHub:** [@pawoPawan](https://github.com/pawoPawan)
 
 ---

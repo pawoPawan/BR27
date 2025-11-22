@@ -128,7 +128,7 @@ git push -u origin main
 ls -la ~/.ssh
 
 # If no keys, generate them
-ssh-keygen -t ed25519 -C "pawanyadavvnit@gmail.com"
+ssh-keygen -t ed25519 -C "pkrtds03@gmail.com"
 
 # Add SSH key to ssh-agent
 eval "$(ssh-agent -s)"
@@ -468,7 +468,7 @@ Complete each step:
 
 **Questions or issues?**
 
-- **Email:** pawanyadavvnit@gmail.com
+- **Email:** pkrtds03@gmail.com
 - **GitHub:** [@pawoPawan](https://github.com/pawoPawan)
 - **Repository:** [github.com/pawoPawan/br27](https://github.com/pawoPawan/br27)
 - **Create an Issue:** Use GitHub Issues for bugs or feature requests

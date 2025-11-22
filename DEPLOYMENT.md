@@ -319,7 +319,7 @@ Add before closing `</head>` tag in `index.html`:
 ## 📞 Support
 
 - **GitHub**: [https://github.com/pawoPawan/br27](https://github.com/pawoPawan/br27)
-- **Email**: pawanyadavvnit@gmail.com
+- **Email**: pkrtds03@gmail.com
 - **GitHub Issues**: Report bugs and feature requests
 - **AWS Support**: Available in AWS Console
 

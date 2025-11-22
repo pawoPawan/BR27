@@ -8,7 +8,7 @@ Your contact form is now configured to send emails! Here's how to complete the s
 
 1. Go to **[Formspree.io](https://formspree.io/)**
 2. Click **"Get Started"** or **"Sign Up"**
-3. Sign up with **your email address** (where you want to receive contact form submissions)
+3. Sign up with **pkrtds03@gmail.com** (this is where you'll receive contact form submissions)
 4. Verify your email address
 
 ### Step 2: Create a New Form

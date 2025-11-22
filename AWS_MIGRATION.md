@@ -542,7 +542,7 @@ sudo apt install certbot python3-certbot-nginx -y
 sudo certbot --nginx -d br27.in -d www.br27.in
 
 # Follow prompts:
-# - Enter email: pawanyadavvnit@gmail.com
+# - Enter email: pkrtds03@gmail.com
 # - Agree to terms: Yes
 # - Redirect HTTP to HTTPS: Yes (recommended)
 
@@ -933,7 +933,7 @@ If something goes wrong:
 ---
 
 **Questions or Issues?**
-- Email: pawanyadavvnit@gmail.com
+- Email: pkrtds03@gmail.com
 - GitHub: [https://github.com/pawoPawan/br27](https://github.com/pawoPawan/br27)
 
 ---
