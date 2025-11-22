@@ -568,6 +568,28 @@ section {
     transform: translateX(5px);
 }
 
+.linkedin-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+/* LinkedIn Badge Styling Override */
+.linkedin-card .badge-base {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.linkedin-card .LI-profile-badge {
+    margin: 0 auto;
+}
+
+.linkedin-card iframe {
+    border-radius: 12px !important;
+}
+
 .info-icon {
     width: 50px;
     height: 50px;
