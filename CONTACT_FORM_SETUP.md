@@ -22,11 +22,11 @@ Your contact form is now configured to send emails! Here's how to complete the s
 
 1. Copy your unique form endpoint
 2. Open `index.html`
-3. Find this line (around line 287):
+3. Find this line (around line 256):
    ```html
-   <form class="contact-form" id="contactForm" action="https://formspree.io/f/xwpkglgl" method="POST">
+   <form class="contact-form" id="contactForm" action="https://formspree.io/f/mjkzewvg" method="POST">
    ```
-4. Replace `xwpkglgl` with **your unique form ID**
+4. ✅ **Already configured!** Your form ID is: `mjkzewvg`
 5. Save the file
 
 ### Step 4: Test It!
