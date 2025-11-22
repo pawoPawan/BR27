@@ -590,6 +590,12 @@ section {
     border-radius: 12px !important;
 }
 
+/* Hide loading link with transition */
+.badge-base__link {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
 .info-icon {
     width: 50px;
     height: 50px;
