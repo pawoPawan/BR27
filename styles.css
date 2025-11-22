@@ -597,6 +597,10 @@ section {
     background: rgba(102, 126, 234, 0.1);
 }
 
+.company-avatar {
+    border-radius: 12px;
+}
+
 .linkedin-avatar img {
     width: 100%;
     height: 100%;
@@ -646,6 +650,27 @@ section {
 
 .linkedin-connect-btn svg {
     flex-shrink: 0;
+}
+
+.linkedin-team-note {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.team-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.team-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
 }
 
 /* Responsive LinkedIn Card */

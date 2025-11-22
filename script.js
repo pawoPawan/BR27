@@ -354,6 +354,6 @@ if (contactForm) {
 console.log('%cBR27', 'font-size: 48px; font-weight: bold; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;');
 console.log('%cEmpowering minds. Enabling progress.', 'font-size: 16px; color: #667eea;');
 console.log('%c🚀 Building a confident, future-ready ecosystem — one idea at a time.', 'font-size: 14px; color: #a0a0b0;');
-console.log('%c💼 LinkedIn: https://www.linkedin.com/in/pawan-kumar-709911105/', 'font-size: 12px; color: #a0a0b0;');
+console.log('%c💼 LinkedIn: https://www.linkedin.com/company/27br/', 'font-size: 12px; color: #a0a0b0;');
 console.log('%c📺 YouTube: https://www.youtube.com/@पल-दो-पल', 'font-size: 12px; color: #a0a0b0;');
 
