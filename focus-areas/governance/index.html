@@ -42,7 +42,8 @@
 
     <!-- Hero Section -->
     <section class="governance-hero page-hero">
-        <div class="hero-background" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+        <div class="hero-background"></div>
+        <div class="hero-particles" id="particles"></div>
         <div class="container hero-content">
             <div class="breadcrumb">
                 <a href="../../home" data-translate="breadcrumb.home">Home</a>
@@ -57,6 +58,23 @@
             <p class="page-subtitle fade-in-delay" data-translate="governance.hero.subtitle">
                 Bringing transparency and understanding to policies, rights, and civic engagement for informed participation.
             </p>
+            <div class="hero-stats fade-in-delay-2">
+                <div class="hero-stat">
+                    <div class="stat-icon">🏛️</div>
+                    <div class="stat-value" data-translate="governance.hero.stat1">Transparent</div>
+                    <div class="stat-label" data-translate="governance.hero.stat1label">Clear Policies</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-icon">⚖️</div>
+                    <div class="stat-value" data-translate="governance.hero.stat2">Rights-Based</div>
+                    <div class="stat-label" data-translate="governance.hero.stat2label">Know Your Rights</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-icon">✊</div>
+                    <div class="stat-value" data-translate="governance.hero.stat3">Active</div>
+                    <div class="stat-label" data-translate="governance.hero.stat3label">Civic Engagement</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -75,6 +93,34 @@
         </div>
     </section>
 
+    <!-- Why It Matters Section -->
+    <section class="why-matters section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="governance.why.tag">Impact</span>
+                <h2 class="section-title" data-translate="governance.why.title">Why Governance Matters</h2>
+                <p class="section-description" data-translate="governance.why.desc">Understanding governance isn't just about politics—it's about shaping the world you live in.</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="governance.why.card1.number">70%</div>
+                    <h3 data-translate="governance.why.card1.title">Unaware of Their Rights</h3>
+                    <p data-translate="governance.why.card1.desc">Most citizens don't fully understand their fundamental rights and how to exercise them effectively.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="governance.why.card2.number">1000+</div>
+                    <h3 data-translate="governance.why.card2.title">Government Schemes</h3>
+                    <p data-translate="governance.why.card2.desc">Numerous welfare schemes exist but remain underutilized due to lack of awareness and complex procedures.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="governance.why.card3.number">25%</div>
+                    <h3 data-translate="governance.why.card3.title">Active Civic Participation</h3>
+                    <p data-translate="governance.why.card3.desc">Only a fraction of citizens actively participate in local governance and decision-making processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Key Focus Areas -->
     <section class="governance-focus section-padding">
         <div class="container">
@@ -84,48 +130,196 @@
             </div>
             <div class="focus-grid">
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
                         </svg>
                     </div>
                     <h3 data-translate="governance.focus.area1.title">Policy Awareness</h3>
                     <p data-translate="governance.focus.area1.desc">
                         Breaking down government policies and schemes into simple, accessible language so citizens can understand and benefit from them.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">RTI Act</span>
+                        <span class="example-tag">Welfare Schemes</span>
+                        <span class="example-tag">Regulations</span>
+                    </div>
                 </div>
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                            <circle cx="12" cy="8" r="7"/>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
                         </svg>
                     </div>
                     <h3 data-translate="governance.focus.area2.title">Citizen Rights & Responsibilities</h3>
                     <p data-translate="governance.focus.area2.desc">
                         Educating people about their fundamental rights, legal protections, and civic duties to foster responsible citizenship.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Constitution</span>
+                        <span class="example-tag">Legal Rights</span>
+                        <span class="example-tag">Duties</span>
+                    </div>
                 </div>
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                         </svg>
                     </div>
                     <h3 data-translate="governance.focus.area3.title">Civic Participation & Advocacy</h3>
                     <p data-translate="governance.focus.area3.desc">
                         Encouraging active participation in local governance, elections, and community decision-making processes for democratic empowerment.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Voting</span>
+                        <span class="example-tag">Gram Sabha</span>
+                        <span class="example-tag">Petitions</span>
+                    </div>
                 </div>
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
                     </div>
                     <h3 data-translate="governance.focus.area4.title">Transparency & Accountability</h3>
                     <p data-translate="governance.focus.area4.desc">
                         Promoting transparency in governance and helping citizens understand how to hold their elected representatives and institutions accountable.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">RTI</span>
+                        <span class="example-tag">Audits</span>
+                        <span class="example-tag">Grievances</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Understanding Rights Section -->
+    <section class="understanding-rights section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="governance.rights.tag">Your Rights</span>
+                <h2 class="section-title" data-translate="governance.rights.title">Understanding Your Fundamental Rights</h2>
+                <p class="section-description" data-translate="governance.rights.desc">Every citizen has basic rights protected by the Constitution. Know them, exercise them.</p>
+            </div>
+            <div class="rights-grid">
+                <div class="rights-card">
+                    <div class="rights-icon">📜</div>
+                    <h3 data-translate="governance.rights.card1.title">Right to Information</h3>
+                    <p data-translate="governance.rights.card1.desc">Access any government information within 30 days by filing an RTI application. Knowledge is power.</p>
+                    <div class="rights-action" data-translate="governance.rights.card1.action">How: File RTI at designated office</div>
+                </div>
+                <div class="rights-card">
+                    <div class="rights-icon">🗳️</div>
+                    <h3 data-translate="governance.rights.card2.title">Right to Vote</h3>
+                    <p data-translate="governance.rights.card2.desc">Every citizen 18+ can vote to elect their representatives and shape governance at all levels.</p>
+                    <div class="rights-action" data-translate="governance.rights.card2.action">How: Register at election office</div>
+                </div>
+                <div class="rights-card">
+                    <div class="rights-icon">⚖️</div>
+                    <h3 data-translate="governance.rights.card3.title">Right to Equality</h3>
+                    <p data-translate="governance.rights.card3.desc">Equal treatment before law regardless of religion, caste, gender, or place of birth.</p>
+                    <div class="rights-action" data-translate="governance.rights.card3.action">How: Legal aid if violated</div>
+                </div>
+                <div class="rights-card">
+                    <div class="rights-icon">🛡️</div>
+                    <h3 data-translate="governance.rights.card4.title">Right to Constitutional Remedies</h3>
+                    <p data-translate="governance.rights.card4.desc">Approach courts if your fundamental rights are violated. Legal protection is your shield.</p>
+                    <div class="rights-action" data-translate="governance.rights.card4.action">How: File writ petition in court</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Participate Section -->
+    <section class="how-participate section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="governance.participate.tag">Take Action</span>
+                <h2 class="section-title" data-translate="governance.participate.title">How You Can Participate</h2>
+                <p class="section-description" data-translate="governance.participate.desc">Simple, practical steps to become an active participant in governance.</p>
+            </div>
+            <div class="participate-timeline">
+                <div class="participate-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-translate="governance.participate.step1.title">Stay Informed</h3>
+                        <p data-translate="governance.participate.step1.desc">Read government notifications, attend Gram Sabha meetings, follow official channels for policy updates.</p>
+                    </div>
+                </div>
+                <div class="participate-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-translate="governance.participate.step2.title">Exercise Your Vote</h3>
+                        <p data-translate="governance.participate.step2.desc">Register to vote, research candidates, participate in local and national elections to choose your representatives.</p>
+                    </div>
+                </div>
+                <div class="participate-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-translate="governance.participate.step3.title">Engage Locally</h3>
+                        <p data-translate="governance.participate.step3.desc">Attend ward meetings, join resident associations, participate in public consultations on local development.</p>
+                    </div>
+                </div>
+                <div class="participate-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-translate="governance.participate.step4.title">Hold Accountable</h3>
+                        <p data-translate="governance.participate.step4.desc">Use RTI to access information, file grievances through proper channels, demand transparency from officials.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real World Examples Section -->
+    <section class="real-world section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="governance.real.tag">Success Stories</span>
+                <h2 class="section-title" data-translate="governance.real.title">Civic Engagement in Action</h2>
+                <p class="section-description" data-translate="governance.real.desc">See how informed citizens are making a real difference in their communities.</p>
+            </div>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-image">
+                        <div class="example-icon">📋</div>
+                    </div>
+                    <div class="example-content">
+                        <h3 data-translate="governance.real.example1.title">RTI Brings Road Repairs</h3>
+                        <p data-translate="governance.real.example1.desc">A citizen used RTI to expose fund misuse in road construction, leading to proper repairs and official accountability.</p>
+                        <div class="example-impact" data-translate="governance.real.example1.impact">Impact: Transparency, Better Infrastructure</div>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="example-image">
+                        <div class="example-icon">🏘️</div>
+                    </div>
+                    <div class="example-content">
+                        <h3 data-translate="governance.real.example2.title">Gram Sabha Secures Water Supply</h3>
+                        <p data-translate="governance.real.example2.desc">Villagers organized in Gram Sabha to demand clean water, successfully securing government funds for water infrastructure.</p>
+                        <div class="example-impact" data-translate="governance.real.example2.impact">Impact: Community empowerment, basic needs met</div>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="example-image">
+                        <div class="example-icon">✍️</div>
+                    </div>
+                    <div class="example-content">
+                        <h3 data-translate="governance.real.example3.title">Petition Saves Local Park</h3>
+                        <p data-translate="governance.real.example3.desc">Residents filed a collective petition preventing commercial construction on public park land, preserving green space.</p>
+                        <div class="example-impact" data-translate="governance.real.example3.impact">Impact: Environmental protection, citizen power</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,8 +329,8 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2 data-translate="governance.cta.title">Ready to Get Started?</h2>
-                <p data-translate="governance.cta.text">Join us in our mission to empower communities through knowledge and practical insights.</p>
+                <h2 data-translate="governance.cta.title">Ready to Become an Informed Citizen?</h2>
+                <p data-translate="governance.cta.text">Join us in building a transparent, accountable, and participatory democracy. Your voice matters, and we'll show you how to make it heard.</p>
                 <div class="cta-buttons">
                     <a href="../../home#contact" class="btn btn-primary btn-large" data-translate="governance.cta.btn1">Get in Touch</a>
                     <a href="../../home#about" class="btn btn-outline btn-large" data-translate="governance.cta.btn2">Learn More About BR27</a>
