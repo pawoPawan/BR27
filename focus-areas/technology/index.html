@@ -42,7 +42,8 @@
 
     <!-- Hero Section -->
     <section class="technology-hero page-hero">
-        <div class="hero-background" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+        <div class="hero-background"></div>
+        <div class="hero-particles" id="particles"></div>
         <div class="container hero-content">
             <div class="breadcrumb">
                 <a href="../../home" data-translate="breadcrumb.home">Home</a>
@@ -57,6 +58,23 @@
             <p class="page-subtitle fade-in-delay" data-translate="technology.hero.subtitle">
                 Demystifying digital tools and emerging tech to help communities stay ahead in an ever-evolving landscape.
             </p>
+            <div class="hero-stats fade-in-delay-2">
+                <div class="hero-stat">
+                    <div class="stat-icon">💡</div>
+                    <div class="stat-value" data-translate="technology.hero.stat1">Simple</div>
+                    <div class="stat-label" data-translate="technology.hero.stat1label">Made Easy</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-value" data-translate="technology.hero.stat2">Practical</div>
+                    <div class="stat-label" data-translate="technology.hero.stat2label">Real Solutions</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-value" data-translate="technology.hero.stat3">Accessible</div>
+                    <div class="stat-label" data-translate="technology.hero.stat3label">For Everyone</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -75,6 +93,34 @@
         </div>
     </section>
 
+    <!-- Why It Matters Section -->
+    <section class="why-matters section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="technology.why.tag">Impact</span>
+                <h2 class="section-title" data-translate="technology.why.title">Why Technology Matters</h2>
+                <p class="section-description" data-translate="technology.why.desc">Understanding technology isn't just about using devices—it's about unlocking potential and creating opportunities.</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="technology.why.card1.number">3.5B+</div>
+                    <h3 data-translate="technology.why.card1.title">Internet Users Globally</h3>
+                    <p data-translate="technology.why.card1.desc">More than half the world is now online, creating unprecedented opportunities for connection and learning.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="technology.why.card2.number">65%</div>
+                    <h3 data-translate="technology.why.card2.title">Jobs Require Digital Skills</h3>
+                    <p data-translate="technology.why.card2.desc">Digital literacy has become essential for employment and economic participation in the modern workforce.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="technology.why.card3.number">10x</div>
+                    <h3 data-translate="technology.why.card3.title">Faster Access to Information</h3>
+                    <p data-translate="technology.why.card3.desc">Technology enables instant access to knowledge that once took days or weeks to obtain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Key Focus Areas -->
     <section class="technology-focus section-padding">
         <div class="container">
@@ -84,7 +130,7 @@
             </div>
             <div class="focus-grid">
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>
                         </svg>
@@ -93,39 +139,149 @@
                     <p data-translate="technology.focus.area1.desc">
                         Teaching essential digital skills from basic computer usage to advanced software applications, empowering people to participate confidently in the digital economy.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Email</span>
+                        <span class="example-tag">MS Office</span>
+                        <span class="example-tag">Internet Basics</span>
+                    </div>
                 </div>
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
                         </svg>
                     </div>
                     <h3 data-translate="technology.focus.area2.title">Emerging Technologies</h3>
                     <p data-translate="technology.focus.area2.desc">
                         Exploring cutting-edge innovations like AI, IoT, blockchain, and cloud computing, and understanding their real-world applications and potential impact.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">AI/ML</span>
+                        <span class="example-tag">Blockchain</span>
+                        <span class="example-tag">IoT</span>
+                    </div>
                 </div>
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                         </svg>
                     </div>
                     <h3 data-translate="technology.focus.area3.title">Tech for Community Development</h3>
                     <p data-translate="technology.focus.area3.desc">
                         Leveraging technology to solve local challenges in education, healthcare, agriculture, and governance, creating sustainable community-driven solutions.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">E-Learning</span>
+                        <span class="example-tag">Telemedicine</span>
+                        <span class="example-tag">Smart Farming</span>
+                    </div>
                 </div>
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
                         </svg>
                     </div>
                     <h3 data-translate="technology.focus.area4.title">Cyber Safety & Security</h3>
                     <p data-translate="technology.focus.area4.desc">
                         Building awareness about online safety, data privacy, and cybersecurity best practices to protect individuals and communities in the digital age.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Privacy</span>
+                        <span class="example-tag">Passwords</span>
+                        <span class="example-tag">Phishing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Made Simple Section -->
+    <section class="tech-simple section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="technology.simple.tag">Simplified</span>
+                <h2 class="section-title" data-translate="technology.simple.title">Complex Tech, Simple Explanations</h2>
+                <p class="section-description" data-translate="technology.simple.desc">We break down intimidating technology concepts into everyday language everyone can understand.</p>
+            </div>
+            <div class="simple-grid">
+                <div class="simple-card">
+                    <div class="simple-icon">🤖</div>
+                    <h3 data-translate="technology.simple.card1.title">Artificial Intelligence (AI)</h3>
+                    <p class="complex-text" data-translate="technology.simple.card1.complex">"Machine learning algorithms processing data..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="technology.simple.card1.simple">Computers that can learn and make decisions, like how your phone suggests the next word when you type.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">☁️</div>
+                    <h3 data-translate="technology.simple.card2.title">Cloud Computing</h3>
+                    <p class="complex-text" data-translate="technology.simple.card2.complex">"Distributed computing infrastructure..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="technology.simple.card2.simple">Storing files on the internet instead of your device, like keeping photos in Google Photos instead of your phone.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">🔗</div>
+                    <h3 data-translate="technology.simple.card3.title">Blockchain</h3>
+                    <p class="complex-text" data-translate="technology.simple.card3.complex">"Decentralized ledger technology..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="technology.simple.card3.simple">A digital record book that everyone can see but no one can cheat, like a transparent ledger that can't be erased.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">🌐</div>
+                    <h3 data-translate="technology.simple.card4.title">Internet of Things (IoT)</h3>
+                    <p class="complex-text" data-translate="technology.simple.card4.complex">"Connected device ecosystem..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="technology.simple.card4.simple">Everyday objects connected to the internet, like a smart bulb you can control from your phone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real World Examples Section -->
+    <section class="real-world section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="technology.real.tag">In Action</span>
+                <h2 class="section-title" data-translate="technology.real.title">Technology in Everyday Life</h2>
+                <p class="section-description" data-translate="technology.real.desc">See how technology is already transforming lives in communities like yours.</p>
+            </div>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-image">
+                        <div class="example-icon">👨‍🌾</div>
+                    </div>
+                    <div class="example-content">
+                        <h3 data-translate="technology.real.example1.title">Farmer Using Weather Apps</h3>
+                        <p data-translate="technology.real.example1.desc">A farmer in rural India uses smartphone weather apps to plan irrigation, saving water and increasing crop yield by 30%.</p>
+                        <div class="example-impact" data-translate="technology.real.example1.impact">Impact: Better harvest, reduced costs</div>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="example-image">
+                        <div class="example-icon">👩‍🎓</div>
+                    </div>
+                    <div class="example-content">
+                        <h3 data-translate="technology.real.example2.title">Student Learning Online</h3>
+                        <p data-translate="technology.real.example2.desc">A student in a remote village accesses free online courses, learning skills that lead to better job opportunities.</p>
+                        <div class="example-impact" data-translate="technology.real.example2.impact">Impact: Education access, career growth</div>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="example-image">
+                        <div class="example-icon">🏪</div>
+                    </div>
+                    <div class="example-content">
+                        <h3 data-translate="technology.real.example3.title">Small Business Going Digital</h3>
+                        <p data-translate="technology.real.example3.desc">A local shop owner uses digital payments and social media marketing to reach more customers and triple their sales.</p>
+                        <div class="example-impact" data-translate="technology.real.example3.impact">Impact: Business growth, wider reach</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,8 +291,8 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2 data-translate="technology.cta.title">Ready to Get Started?</h2>
-                <p data-translate="technology.cta.text">Join us in our mission to empower communities through knowledge and practical insights.</p>
+                <h2 data-translate="technology.cta.title">Ready to Embrace Technology?</h2>
+                <p data-translate="technology.cta.text">Let's work together to make technology accessible and useful for your community. No tech background needed—we'll guide you every step of the way.</p>
                 <div class="cta-buttons">
                     <a href="../../home#contact" class="btn btn-primary btn-large" data-translate="technology.cta.btn1">Get in Touch</a>
                     <a href="../../home#about" class="btn btn-outline btn-large" data-translate="technology.cta.btn2">Learn More About BR27</a>

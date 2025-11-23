@@ -1,7 +1,10 @@
 /* ===== Technology Page Styles ===== */
 
+/* Hero Section */
 .technology-hero.page-hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
 }
 
 .technology-hero .hero-background {
@@ -10,6 +13,59 @@
         radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
 }
 
+.hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-stat {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.hero-stat:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-stat .stat-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.hero-stat .stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.hero-stat .stat-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Mission Section */
 .technology-mission {
     background: var(--dark-surface);
 }
@@ -23,10 +79,278 @@
     text-align: center;
 }
 
-.technology-focus {
+/* Why It Matters Section */
+.why-matters {
     background: var(--dark-bg);
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.impact-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.impact-card:hover::before {
+    opacity: 1;
+}
+
+.impact-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+}
+
+.impact-number {
+    font-size: 56px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+}
+
+.impact-card h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.impact-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Focus Areas */
+.technology-focus {
+    background: var(--dark-surface);
 }
 
 .technology-focus .focus-card-icon {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.focus-card-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.example-tag {
+    padding: 6px 14px;
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 20px;
+    font-size: 12px;
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* Tech Made Simple Section */
+.tech-simple {
+    background: var(--dark-bg);
+}
+
+.simple-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.simple-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 35px;
+    transition: all 0.3s ease;
+}
+
+.simple-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.simple-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.simple-card h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.complex-text {
+    font-size: 14px;
+    color: rgba(245, 87, 108, 0.8);
+    font-style: italic;
+    margin-bottom: 12px;
+    padding: 10px 16px;
+    background: rgba(245, 87, 108, 0.1);
+    border-left: 3px solid rgba(245, 87, 108, 0.5);
+    border-radius: 4px;
+}
+
+.arrow {
+    font-size: 24px;
+    text-align: center;
+    color: #667eea;
+    margin: 16px 0;
+}
+
+.simple-text {
+    font-size: 15px;
+    color: rgba(67, 233, 123, 0.9);
+    line-height: 1.7;
+    padding: 12px 16px;
+    background: rgba(67, 233, 123, 0.1);
+    border-left: 3px solid rgba(67, 233, 123, 0.5);
+    border-radius: 4px;
+}
+
+/* Real World Examples */
+.real-world {
+    background: var(--dark-surface);
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.example-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.example-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.example-image {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.example-icon {
+    font-size: 80px;
+}
+
+.example-content {
+    padding: 30px;
+}
+
+.example-content h3 {
+    font-size: 20px;
+    margin-bottom: 14px;
+    color: var(--text-primary);
+}
+
+.example-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.example-impact {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(67, 233, 123, 0.1);
+    border: 1px solid rgba(67, 233, 123, 0.3);
+    border-radius: 20px;
+    font-size: 13px;
+    color: #43e97b;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .simple-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stat .stat-value {
+        font-size: 20px;
+    }
+
+    .impact-number {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-stat {
+        padding: 20px 16px;
+    }
+
+    .hero-stat .stat-icon {
+        font-size: 32px;
+    }
+
+    .impact-card {
+        padding: 30px 20px;
+    }
+
+    .simple-card {
+        padding: 25px;
+    }
+
+    .example-image {
+        height: 150px;
+    }
+
+    .example-icon {
+        font-size: 60px;
+    }
 }
