@@ -42,7 +42,8 @@
 
     <!-- Hero Section -->
     <section class="rural-development-hero page-hero">
-        <div class="hero-background" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+        <div class="hero-background"></div>
+        <div class="hero-particles" id="particles"></div>
         <div class="container hero-content">
             <div class="breadcrumb">
                 <a href="../../home" data-translate="breadcrumb.home">Home</a>
@@ -57,6 +58,23 @@
             <p class="page-subtitle fade-in-delay" data-translate="rural-development.hero.subtitle">
                 Empowering rural communities with knowledge, resources, and pathways to sustainable growth and prosperity.
             </p>
+            <div class="hero-stats fade-in-delay-2">
+                <div class="hero-stat">
+                    <div class="stat-icon">🌾</div>
+                    <div class="stat-value" data-translate="rural-development.hero.stat1">Sustainable</div>
+                    <div class="stat-label" data-translate="rural-development.hero.stat1label">Long-term Growth</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-icon">🤝</div>
+                    <div class="stat-value" data-translate="rural-development.hero.stat2">Community</div>
+                    <div class="stat-label" data-translate="rural-development.hero.stat2label">Driven Solutions</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-value" data-translate="rural-development.hero.stat3">Prosperous</div>
+                    <div class="stat-label" data-translate="rural-development.hero.stat3label">Economic Uplift</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -75,57 +93,235 @@
         </div>
     </section>
 
+    <!-- Why It Matters Section -->
+    <section class="why-matters section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="rural-development.why.tag">Impact</span>
+                <h2 class="section-title" data-translate="rural-development.why.title">Why Rural Development Matters</h2>
+                <p class="section-description" data-translate="rural-development.why.desc">Rural areas hold immense potential—unlocking it means prosperity for everyone.</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="rural-development.why.card1.number">65%</div>
+                    <h3 data-translate="rural-development.why.card1.title">Population in Rural Areas</h3>
+                    <p data-translate="rural-development.why.card1.desc">Nearly two-thirds of India lives in rural areas, making rural development critical for national progress and inclusive growth.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="rural-development.why.card2.number">50%</div>
+                    <h3 data-translate="rural-development.why.card2.title">GDP from Agriculture</h3>
+                    <p data-translate="rural-development.why.card2.desc">Agriculture and allied rural activities contribute significantly to the economy, supporting millions of livelihoods nationwide.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="rural-development.why.card3.number">2x</div>
+                    <h3 data-translate="rural-development.why.card3.title">Growth Potential</h3>
+                    <p data-translate="rural-development.why.card3.desc">With proper resources and knowledge, rural economies can double their productivity and prosperity within a decade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Key Focus Areas -->
     <section class="rural-development-focus section-padding">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag" data-translate="rural-development.focus.tag">Key Focus Areas</span>
-                <h2 class="section-title" data-translate="rural-development.focus.title">How We Make a Difference</h2>
+                <h2 class="section-title" data-translate="rural-development.focus.title">Pathways to Rural Prosperity</h2>
             </div>
             <div class="focus-grid">
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
                         </svg>
                     </div>
-                    <h3 data-translate="rural-development.focus.area1.title">Agricultural Innovation</h3>
+                    <h3 data-translate="rural-development.focus.area1.title">Modern Agriculture & Farming</h3>
                     <p data-translate="rural-development.focus.area1.desc">
-                        Introducing modern farming techniques, sustainable practices, and agricultural technology to improve productivity and farmer livelihoods.
+                        Introducing sustainable farming practices, modern techniques, and technology to increase crop yields and farmer income.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Organic Farming</span>
+                        <span class="example-tag">Irrigation Tech</span>
+                        <span class="example-tag">Crop Planning</span>
+                    </div>
                 </div>
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                            <circle cx="12" cy="8" r="7"/>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
                         </svg>
                     </div>
-                    <h3 data-translate="rural-development.focus.area2.title">Rural Infrastructure & Connectivity</h3>
+                    <h3 data-translate="rural-development.focus.area2.title">Rural Entrepreneurship</h3>
                     <p data-translate="rural-development.focus.area2.desc">
-                        Advocating for better infrastructure, digital connectivity, and access to essential services to bridge the urban-rural divide.
+                        Supporting rural businesses, micro-enterprises, and self-help groups to create jobs and boost local economies.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Self-Help Groups</span>
+                        <span class="example-tag">Micro Business</span>
+                        <span class="example-tag">Cooperatives</span>
+                    </div>
                 </div>
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
                         </svg>
                     </div>
-                    <h3 data-translate="rural-development.focus.area3.title">Rural Entrepreneurship</h3>
+                    <h3 data-translate="rural-development.focus.area3.title">Infrastructure & Connectivity</h3>
                     <p data-translate="rural-development.focus.area3.desc">
-                        Supporting rural entrepreneurs with business skills, market access, and resources to create local economic opportunities and employment.
+                        Improving roads, electricity, internet, and basic amenities to bridge the urban-rural divide and enable progress.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Roads</span>
+                        <span class="example-tag">Electricity</span>
+                        <span class="example-tag">Internet</span>
+                    </div>
                 </div>
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
                         </svg>
                     </div>
                     <h3 data-translate="rural-development.focus.area4.title">Education & Healthcare Access</h3>
                     <p data-translate="rural-development.focus.area4.desc">
-                        Working towards improved access to quality education and healthcare facilities in rural areas for holistic community development.
+                        Ensuring rural communities have access to quality education and healthcare services for holistic development.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Schools</span>
+                        <span class="example-tag">Clinics</span>
+                        <span class="example-tag">Mobile Units</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rural Made Simple Section -->
+    <section class="rural-simple section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="rural-development.simple.tag">Simplified</span>
+                <h2 class="section-title" data-translate="rural-development.simple.title">Complex Programs, Simple Benefits</h2>
+                <p class="section-description" data-translate="rural-development.simple.desc">Breaking down complex rural development schemes into practical benefits everyone can access.</p>
+            </div>
+            <div class="simple-grid">
+                <div class="simple-card">
+                    <div class="simple-icon">🌾</div>
+                    <h3 data-translate="rural-development.simple.card1.title">PM-KISAN Scheme</h3>
+                    <p class="complex-text" data-translate="rural-development.simple.card1.complex">"Pradhan Mantri Kisan Samman Nidhi Yojana income support mechanism..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="rural-development.simple.card1.simple">₹6,000 per year directly to your bank account in 3 installments. Just register your land records at the nearest office—it's free money for farmers.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">💰</div>
+                    <h3 data-translate="rural-development.simple.card2.title">MUDRA Loan</h3>
+                    <p class="complex-text" data-translate="rural-development.simple.card2.complex">"Micro Units Development & Refinance Agency collateral-free lending..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="rural-development.simple.card2.simple">Loan up to ₹10 lakhs to start any small business—no collateral needed. Just show your business plan to the bank. Perfect for starting shops, farming, or services.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">💡</div>
+                    <h3 data-translate="rural-development.simple.card3.title">Solar Pump Subsidy</h3>
+                    <p class="complex-text" data-translate="rural-development.simple.card3.complex">"PM-KUSUM renewable energy agricultural pump scheme subsidy framework..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="rural-development.simple.card3.simple">Get 60-90% subsidy on solar water pumps. Save ₹20,000+ yearly on electricity, irrigate your fields anytime. Government pays most of the cost.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">🏠</div>
+                    <h3 data-translate="rural-development.simple.card4.title">Awas Yojana (Housing)</h3>
+                    <p class="complex-text" data-translate="rural-development.simple.card4.complex">"Pradhan Mantri Awas Yojana-Gramin beneficiary selection criteria..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="rural-development.simple.card4.simple">₹1.2-1.3 lakhs to build your own pucca house. Money comes in installments as you build. Apply through your Gram Panchayat if you don't own a house.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Pathways Section -->
+    <section class="development-pathways section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="rural-development.pathways.tag">Action Plan</span>
+                <h2 class="section-title" data-translate="rural-development.pathways.title">Village Development Journey</h2>
+                <p class="section-description" data-translate="rural-development.pathways.desc">Step-by-step approach to transform your village into a prosperous community.</p>
+            </div>
+            <div class="pathway-timeline">
+                <div class="pathway-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-translate="rural-development.pathways.step1.title">Community Assessment</h3>
+                        <p data-translate="rural-development.pathways.step1.desc">Identify village needs, resources, and opportunities through Gram Sabha meetings. Listen to everyone—youth, women, farmers, artisans.</p>
+                    </div>
+                </div>
+                <div class="pathway-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-translate="rural-development.pathways.step2.title">Access Government Schemes</h3>
+                        <p data-translate="rural-development.pathways.step2.desc">Learn about and apply for relevant schemes—agriculture, housing, education, health. Use Common Service Centers for help.</p>
+                    </div>
+                </div>
+                <div class="pathway-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-translate="rural-development.pathways.step3.title">Build Local Enterprises</h3>
+                        <p data-translate="rural-development.pathways.step3.desc">Start cooperatives, self-help groups, and small businesses. Pool resources, share knowledge, create jobs within the village.</p>
+                    </div>
+                </div>
+                <div class="pathway-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-translate="rural-development.pathways.step4.title">Sustain & Scale</h3>
+                        <p data-translate="rural-development.pathways.step4.desc">Maintain progress through continuous learning, youth involvement, and adapting to market needs. Share success with neighboring villages.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="rural-development.stories.tag">Transformation</span>
+                <h2 class="section-title" data-translate="rural-development.stories.title">Villages That Prospered</h2>
+                <p class="section-description" data-translate="rural-development.stories.desc">Real stories of rural communities that transformed through knowledge and collective action.</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-icon">🌊</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="rural-development.stories.story1.title">Hiware Bazar: From Drought to Prosperity</h3>
+                        <p data-translate="rural-development.stories.story1.desc">This Maharashtra village transformed from drought-prone to water-abundant through watershed management, becoming one of India's richest villages.</p>
+                        <div class="story-impact" data-translate="rural-development.stories.story1.impact">Result: 60 crorepatis, zero poverty</div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-icon">💡</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="rural-development.stories.story2.title">Punsari: India's First Digital Village</h3>
+                        <p data-translate="rural-development.stories.story2.desc">Gujarat's Punsari adopted Wi-Fi, CCTV, and e-governance, transforming into a model smart village with modern amenities.</p>
+                        <div class="story-impact" data-translate="rural-development.stories.story2.impact">Result: Digital literacy, better governance</div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-icon">♻️</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="rural-development.stories.story3.title">Ralegan Siddhi: Model Eco-Village</h3>
+                        <p data-translate="rural-development.stories.story3.desc">Anna Hazare transformed this village through rainwater harvesting, organic farming, and community cooperation into a self-sufficient model.</p>
+                        <div class="story-impact" data-translate="rural-development.stories.story3.impact">Result: Self-sufficient, environmentally sustainable</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,10 +331,10 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2 data-translate="rural-development.cta.title">Ready to Get Started?</h2>
-                <p data-translate="rural-development.cta.text">Join us in our mission to empower communities through knowledge and practical insights.</p>
+                <h2 data-translate="rural-development.cta.title">Ready to Transform Your Village?</h2>
+                <p data-translate="rural-development.cta.text">Every thriving village started with one informed person taking action. Whether you're a farmer, Sarpanch, teacher, or concerned citizen—we'll guide you with knowledge, resources, and practical pathways to prosperity.</p>
                 <div class="cta-buttons">
-                    <a href="../../home#contact" class="btn btn-primary btn-large" data-translate="rural-development.cta.btn1">Get in Touch</a>
+                    <a href="../../home#contact" class="btn btn-primary btn-large" data-translate="rural-development.cta.btn1">Start the Journey</a>
                     <a href="../../home#about" class="btn btn-outline btn-large" data-translate="rural-development.cta.btn2">Learn More About BR27</a>
                 </div>
             </div>
