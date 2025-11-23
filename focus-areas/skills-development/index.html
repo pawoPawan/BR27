@@ -42,7 +42,8 @@
 
     <!-- Hero Section -->
     <section class="skills-development-hero page-hero">
-        <div class="hero-background" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+        <div class="hero-background"></div>
+        <div class="hero-particles" id="particles"></div>
         <div class="container hero-content">
             <div class="breadcrumb">
                 <a href="../../home" data-translate="breadcrumb.home">Home</a>
@@ -57,6 +58,23 @@
             <p class="page-subtitle fade-in-delay" data-translate="skills-development.hero.subtitle">
                 Practical training and insights to build competencies that matter in today's job market and entrepreneurship.
             </p>
+            <div class="hero-stats fade-in-delay-2">
+                <div class="hero-stat">
+                    <div class="stat-icon">💼</div>
+                    <div class="stat-value" data-translate="skills-development.hero.stat1">Practical</div>
+                    <div class="stat-label" data-translate="skills-development.hero.stat1label">Job-Ready Skills</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-value" data-translate="skills-development.hero.stat2">Market-Driven</div>
+                    <div class="stat-label" data-translate="skills-development.hero.stat2label">In-Demand Training</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-icon">💡</div>
+                    <div class="stat-value" data-translate="skills-development.hero.stat3">Hands-On</div>
+                    <div class="stat-label" data-translate="skills-development.hero.stat3label">Real-World Projects</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -75,57 +93,236 @@
         </div>
     </section>
 
+    <!-- Why It Matters Section -->
+    <section class="why-matters section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="skills-development.why.tag">Impact</span>
+                <h2 class="section-title" data-translate="skills-development.why.title">Why Skills Matter Today</h2>
+                <p class="section-description" data-translate="skills-development.why.desc">The job market is evolving rapidly—staying relevant means continuous learning and skill development.</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="skills-development.why.card1.number">85M</div>
+                    <h3 data-translate="skills-development.why.card1.title">Jobs Need New Skills</h3>
+                    <p data-translate="skills-development.why.card1.desc">By 2030, 85 million jobs may go unfilled due to a lack of skilled workers, creating massive opportunities for those who upskill.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="skills-development.why.card2.number">50%</div>
+                    <h3 data-translate="skills-development.why.card2.title">Skills Become Obsolete</h3>
+                    <p data-translate="skills-development.why.card2.desc">Half of all employee skills will need updating every 3-5 years due to technological advancement and market changes.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="skills-development.why.card3.number">3x</div>
+                    <h3 data-translate="skills-development.why.card3.title">Higher Earning Potential</h3>
+                    <p data-translate="skills-development.why.card3.desc">Skilled professionals earn 3 times more than those without specialized competencies in today's economy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Key Focus Areas -->
     <section class="skills-development-focus section-padding">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag" data-translate="skills-development.focus.tag">Key Focus Areas</span>
-                <h2 class="section-title" data-translate="skills-development.focus.title">How We Make a Difference</h2>
+                <h2 class="section-title" data-translate="skills-development.focus.title">Skills That Open Doors</h2>
             </div>
             <div class="focus-grid">
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
                         </svg>
                     </div>
-                    <h3 data-translate="skills-development.focus.area1.title">Technical Skills Training</h3>
+                    <h3 data-translate="skills-development.focus.area1.title">Digital & Technical Skills</h3>
                     <p data-translate="skills-development.focus.area1.desc">
-                        Hands-on training in in-demand technical skills including programming, data analysis, design, and more to boost career prospects.
+                        Master in-demand digital skills from basic computer literacy to advanced programming, data analysis, and digital marketing.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Coding</span>
+                        <span class="example-tag">Data Analytics</span>
+                        <span class="example-tag">Digital Marketing</span>
+                    </div>
                 </div>
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                         </svg>
                     </div>
                     <h3 data-translate="skills-development.focus.area2.title">Soft Skills & Communication</h3>
                     <p data-translate="skills-development.focus.area2.desc">
-                        Developing essential soft skills like communication, leadership, teamwork, and problem-solving crucial for workplace success.
+                        Develop essential interpersonal skills like leadership, teamwork, communication, and emotional intelligence that employers value.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Leadership</span>
+                        <span class="example-tag">Teamwork</span>
+                        <span class="example-tag">Presentation</span>
+                    </div>
                 </div>
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
                         </svg>
                     </div>
-                    <h3 data-translate="skills-development.focus.area3.title">Entrepreneurship Fundamentals</h3>
+                    <h3 data-translate="skills-development.focus.area3.title">Entrepreneurship & Business</h3>
                     <p data-translate="skills-development.focus.area3.desc">
-                        Equipping aspiring entrepreneurs with business planning, marketing, financial management, and innovation skills to launch successful ventures.
+                        Learn how to start and grow your own business, from ideation to execution, with practical insights into business planning and management.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Business Plan</span>
+                        <span class="example-tag">Marketing</span>
+                        <span class="example-tag">Finance</span>
+                    </div>
                 </div>
                 <div class="focus-card">
-                    <div class="focus-card-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="focus-card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
                         </svg>
                     </div>
-                    <h3 data-translate="skills-development.focus.area4.title">Career Readiness & Job Search</h3>
+                    <h3 data-translate="skills-development.focus.area4.title">Vocational & Trade Skills</h3>
                     <p data-translate="skills-development.focus.area4.desc">
-                        Preparing individuals for the job market with resume building, interview skills, networking strategies, and professional development guidance.
+                        Hands-on training in practical trades and vocations that lead to immediate employment opportunities and self-employment.
                     </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Electrical</span>
+                        <span class="example-tag">Plumbing</span>
+                        <span class="example-tag">Carpentry</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Made Simple Section -->
+    <section class="skills-simple section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="skills-development.simple.tag">Simplified</span>
+                <h2 class="section-title" data-translate="skills-development.simple.title">Complex Skills, Simple Steps</h2>
+                <p class="section-description" data-translate="skills-development.simple.desc">Breaking down intimidating skills into achievable learning paths anyone can follow.</p>
+            </div>
+            <div class="simple-grid">
+                <div class="simple-card">
+                    <div class="simple-icon">💻</div>
+                    <h3 data-translate="skills-development.simple.card1.title">Data Science</h3>
+                    <p class="complex-text" data-translate="skills-development.simple.card1.complex">"Machine learning algorithms, statistical modeling, Python libraries..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="skills-development.simple.card1.simple">Learn Excel first, then basic statistics, then simple data visualization. Build up gradually—you don't need a PhD to start analyzing data and finding insights.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">🎨</div>
+                    <h3 data-translate="skills-development.simple.card2.title">Digital Marketing</h3>
+                    <p class="complex-text" data-translate="skills-development.simple.card2.complex">"SEO optimization, conversion funnels, A/B testing, analytics..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="skills-development.simple.card2.simple">Start with creating social media posts, learn what people like, then try simple Facebook ads. Marketing is about understanding people, not complex tools.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">🗣️</div>
+                    <h3 data-translate="skills-development.simple.card3.title">Public Speaking</h3>
+                    <p class="complex-text" data-translate="skills-development.simple.card3.complex">"Rhetorical techniques, audience analysis, persuasive frameworks..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="skills-development.simple.card3.simple">Practice speaking to your mirror, then friends, then small groups. Tell stories people care about. Confidence comes from repetition, not talent.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">🚀</div>
+                    <h3 data-translate="skills-development.simple.card4.title">Starting a Business</h3>
+                    <p class="complex-text" data-translate="skills-development.simple.card4.complex">"Business model canvas, market segmentation, competitive analysis..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="skills-development.simple.card4.simple">Find a problem people have, offer a simple solution, test with 10 people first. Start small—every big business began with one customer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Pathways Section -->
+    <section class="learning-pathways section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="skills-development.pathways.tag">Career Paths</span>
+                <h2 class="section-title" data-translate="skills-development.pathways.title">Your Skill Development Journey</h2>
+                <p class="section-description" data-translate="skills-development.pathways.desc">Clear, achievable pathways from beginner to professional.</p>
+            </div>
+            <div class="pathway-timeline">
+                <div class="pathway-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-translate="skills-development.pathways.step1.title">Assess Your Interests</h3>
+                        <p data-translate="skills-development.pathways.step1.desc">Identify your strengths, interests, and market opportunities. What do you enjoy? What skills are in demand? Where do they intersect?</p>
+                    </div>
+                </div>
+                <div class="pathway-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-translate="skills-development.pathways.step2.title">Learn Foundational Skills</h3>
+                        <p data-translate="skills-development.pathways.step2.desc">Build a strong foundation through free online courses, books, tutorials, and practice. Start with basics before advanced topics.</p>
+                    </div>
+                </div>
+                <div class="pathway-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-translate="skills-development.pathways.step3.title">Practice with Real Projects</h3>
+                        <p data-translate="skills-development.pathways.step3.desc">Apply skills to real-world projects, freelance work, or volunteer opportunities. Build a portfolio that demonstrates your capabilities.</p>
+                    </div>
+                </div>
+                <div class="pathway-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-translate="skills-development.pathways.step4.title">Get Certified & Keep Learning</h3>
+                        <p data-translate="skills-development.pathways.step4.desc">Earn recognized certifications, join communities, find mentors, and commit to lifelong learning. The journey never ends.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="skills-development.stories.tag">Real Results</span>
+                <h2 class="section-title" data-translate="skills-development.stories.title">Skills That Changed Lives</h2>
+                <p class="section-description" data-translate="skills-development.stories.desc">See how skill development opened doors for people just like you.</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-icon">👨‍💻</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="skills-development.stories.story1.title">From Factory Worker to Web Developer</h3>
+                        <p data-translate="skills-development.stories.story1.desc">Rajesh learned coding online after work hours. In 18 months, he transitioned from factory work to a tech job with 3x salary increase.</p>
+                        <div class="story-impact" data-translate="skills-development.stories.story1.impact">Outcome: New Career, Better Income</div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-icon">👩‍🏫</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="skills-development.stories.story2.title">Teacher Becomes Online Entrepreneur</h3>
+                        <p data-translate="skills-development.stories.story2.desc">Priya learned digital marketing and started selling educational courses online, reaching 10,000+ students globally.</p>
+                        <div class="story-impact" data-translate="skills-development.stories.story2.impact">Outcome: Location Independence, Global Impact</div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-icon">🔧</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="skills-development.stories.story3.title">Electrician Scales Business</h3>
+                        <p data-translate="skills-development.stories.story3.desc">Amit learned business management and digital tools, grew his 1-person electrical service to a 15-employee company.</p>
+                        <div class="story-impact" data-translate="skills-development.stories.story3.impact">Outcome: Business Growth, Job Creation</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,10 +332,10 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2 data-translate="skills-development.cta.title">Ready to Get Started?</h2>
-                <p data-translate="skills-development.cta.text">Join us in our mission to empower communities through knowledge and practical insights.</p>
+                <h2 data-translate="skills-development.cta.title">Ready to Build Your Future?</h2>
+                <p data-translate="skills-development.cta.text">Whether you're starting from scratch or upskilling for growth, we'll guide you with practical training and real-world insights. Your career transformation starts here.</p>
                 <div class="cta-buttons">
-                    <a href="../../home#contact" class="btn btn-primary btn-large" data-translate="skills-development.cta.btn1">Get in Touch</a>
+                    <a href="../../home#contact" class="btn btn-primary btn-large" data-translate="skills-development.cta.btn1">Get Started Today</a>
                     <a href="../../home#about" class="btn btn-outline btn-large" data-translate="skills-development.cta.btn2">Learn More About BR27</a>
                 </div>
             </div>
