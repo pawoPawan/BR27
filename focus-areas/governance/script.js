@@ -41,6 +41,21 @@ const translations = {
         "governance.focus.area3.desc": "Encouraging active participation in local governance, elections, and community decision-making processes for democratic empowerment.",
         "governance.focus.area4.title": "Transparency & Accountability",
         "governance.focus.area4.desc": "Promoting transparency in governance and helping citizens understand how to hold their elected representatives and institutions accountable.",
+        "governance.simple.tag": "Simplified",
+        "governance.simple.title": "Complex Governance, Simple Explanations",
+        "governance.simple.desc": "We break down intimidating governance terms into everyday language everyone can understand.",
+        "governance.simple.card1.title": "Right to Information (RTI)",
+        "governance.simple.card1.complex": "\"Application under Section 6(1) of RTI Act 2005...\"",
+        "governance.simple.card1.simple": "A simple form you can fill to ask the government any question about how they spend public money or make decisions. They must reply within 30 days.",
+        "governance.simple.card2.title": "Gram Sabha",
+        "governance.simple.card2.complex": "\"Village-level democratic assembly under Panchayati Raj...\"",
+        "governance.simple.card2.simple": "A meeting where all adults in your village can speak up, vote on local issues, and decide how to spend village funds. Your voice matters here.",
+        "governance.simple.card3.title": "Writ Petition",
+        "governance.simple.card3.complex": "\"Constitutional remedy under Article 32 and 226...\"",
+        "governance.simple.card3.simple": "A legal request to the court asking them to protect your fundamental rights when the government or someone violates them. Like a complaint to the highest authority.",
+        "governance.simple.card4.title": "Public Interest Litigation (PIL)",
+        "governance.simple.card4.complex": "\"Legal action initiated for public welfare under judicial activism...\"",
+        "governance.simple.card4.simple": "A case anyone can file in court to help the community, like stopping pollution or demanding better roads. You don't have to be personally affected to fight for the public good.",
         "governance.rights.tag": "Your Rights",
         "governance.rights.title": "Understanding Your Fundamental Rights",
         "governance.rights.desc": "Every citizen has basic rights protected by the Constitution. Know them, exercise them.",
@@ -137,6 +152,21 @@ const translations = {
         "governance.focus.area3.desc": "लोकतांत्रिक सशक्तिकरण के लिए स्थानीय शासन, चुनाव और समुदाय निर्णय लेने की प्रक्रियाओं में सक्रिय भागीदारी को प्रोत्साहित करना।",
         "governance.focus.area4.title": "पारदर्शिता और जवाबदेही",
         "governance.focus.area4.desc": "शासन में पारदर्शिता को बढ़ावा देना और नागरिकों को यह समझने में मदद करना कि अपने निर्वाचित प्रतिनिधियों और संस्थानों को कैसे जवाबदेह बनाएं।",
+        "governance.simple.tag": "सरलीकृत",
+        "governance.simple.title": "जटिल शासन, सरल स्पष्टीकरण",
+        "governance.simple.desc": "हम डराने वाले शासन शब्दों को रोजमर्रा की भाषा में तोड़ते हैं जिसे हर कोई समझ सकता है।",
+        "governance.simple.card1.title": "सूचना का अधिकार (आरटीआई)",
+        "governance.simple.card1.complex": "\"आरटीआई अधिनियम 2005 की धारा 6(1) के तहत आवेदन...\"",
+        "governance.simple.card1.simple": "एक साधारण फॉर्म जिसे आप भर सकते हैं और सरकार से कोई भी सवाल पूछ सकते हैं कि वे सार्वजनिक धन कैसे खर्च करते हैं या निर्णय कैसे लेते हैं। उन्हें 30 दिनों के भीतर जवाब देना होगा।",
+        "governance.simple.card2.title": "ग्राम सभा",
+        "governance.simple.card2.complex": "\"पंचायती राज के तहत गांव स्तर की लोकतांत्रिक सभा...\"",
+        "governance.simple.card2.simple": "एक बैठक जहां आपके गांव के सभी वयस्क बोल सकते हैं, स्थानीय मुद्दों पर वोट कर सकते हैं, और यह तय कर सकते हैं कि गांव के फंड कैसे खर्च करें। यहां आपकी आवाज मायने रखती है।",
+        "governance.simple.card3.title": "रिट याचिका",
+        "governance.simple.card3.complex": "\"अनुच्छेद 32 और 226 के तहत संवैधानिक उपचार...\"",
+        "governance.simple.card3.simple": "अदालत से एक कानूनी अनुरोध जब सरकार या कोई आपके मौलिक अधिकारों का उल्लंघन करता है तो उनकी रक्षा करने के लिए। जैसे सर्वोच्च अधिकारी से शिकायत।",
+        "governance.simple.card4.title": "जनहित याचिका (पीआईएल)",
+        "governance.simple.card4.complex": "\"न्यायिक सक्रियता के तहत जनकल्याण के लिए कानूनी कार्रवाई...\"",
+        "governance.simple.card4.simple": "एक मामला जो कोई भी समुदाय की मदद के लिए अदालत में दाखिल कर सकता है, जैसे प्रदूषण रोकना या बेहतर सड़कों की मांग करना। सार्वजनिक भलाई के लिए लड़ने के लिए आपको व्यक्तिगत रूप से प्रभावित होने की आवश्यकता नहीं है।",
         "governance.rights.tag": "आपके अधिकार",
         "governance.rights.title": "अपने मौलिक अधिकारों को समझना",
         "governance.rights.desc": "प्रत्येक नागरिक के पास संविधान द्वारा संरक्षित बुनियादी अधिकार हैं। उन्हें जानें, उनका प्रयोग करें।",
@@ -286,7 +316,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe all cards and sections
-    const animatedElements = document.querySelectorAll('.impact-card, .focus-card, .rights-card, .participate-step, .example-card');
+    const animatedElements = document.querySelectorAll('.impact-card, .focus-card, .simple-card, .rights-card, .participate-step, .example-card');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
