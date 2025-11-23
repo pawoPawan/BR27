@@ -1126,3 +1126,37 @@ section {
     }
 }
 
+
+/* Focus Item Link Styles */
+.focus-item-link {
+    text-decoration: none;
+    display: block;
+}
+
+.focus-item-arrow {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.focus-item-arrow svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.focus-item-link:hover .focus-item-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
