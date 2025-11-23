@@ -28,7 +28,7 @@ const translations = {
         focus: {
             tag: "What We Do",
             title: "Our Focus Areas",
-            description: "Actionable knowledge across 6 key domains for holistic development",
+            description: "Actionable knowledge across domains for holistic development",
             tech: { title: "Technology", text: "Demystifying digital tools and emerging tech to help communities stay ahead in an ever-evolving landscape." },
             gov: { title: "Governance", text: "Bringing transparency and understanding to policies, rights, and civic engagement for informed participation." },
             skills: { title: "Skills Development", text: "Practical training and insights to build competencies that matter in today's job market and entrepreneurship." },
@@ -106,7 +106,7 @@ const translations = {
         focus: {
             tag: "हम क्या करते हैं",
             title: "हमारे फोकस क्षेत्र",
-            description: "समग्र विकास के लिए 6 प्रमुख क्षेत्रों में कार्रवाई योग्य ज्ञान",
+            description: "समग्र विकास के लिए विभिन्न क्षेत्रों में कार्रवाई योग्य ज्ञान",
             tech: { title: "प्रौद्योगिकी", text: "डिजिटल टूल और उभरती तकनीक को सरल बनाना ताकि समुदाय लगातार बदलते परिदृश्य में आगे रह सकें।" },
             gov: { title: "शासन", text: "नीतियों, अधिकारों और नागरिक भागीदारी में पारदर्शिता और समझ लाना ताकि सूचित भागीदारी हो सके।" },
             skills: { title: "कौशल विकास", text: "व्यावहारिक प्रशिक्षण और अंतर्दृष्टि जो आज के नौकरी बाजार और उद्यमिता में मायने रखने वाली दक्षताओं का निर्माण करती है।" },

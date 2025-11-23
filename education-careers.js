@@ -1,163 +1,134 @@
-// Rural Development Page Translations
-const ruralTranslations = {
-    breadcrumb: {
-        home: { en: "Home", hi: "होम" },
-        rural: { en: "Rural Development", hi: "ग्रामीण विकास" }
+// Translations for education-careers page
+const translations = {
+    en: {
+        "nav.home": "Home",
+        "nav.about": "About",
+        "nav.focus": "Focus Areas",
+        "nav.contact": "Contact",
+        "breadcrumb.home": "Home",
+        "breadcrumb.focus": "Focus Areas",
+        "breadcrumb.education-careers": "Education Paths & Careers",
+        "education-careers.hero.title": "Education Paths & Careers",
+        "education-careers.hero.subtitle": "Guiding students through educational choices, career opportunities, and pathways to success in their chosen fields.",
+        "education-careers.mission.tag": "Our Mission",
+        "education-careers.mission.title": "Navigating Your Future",
+        "education-careers.mission.desc": "Choosing the right educational path and career can be overwhelming. BR27 provides comprehensive guidance to students through educational choices, career opportunities, and pathways to success in their chosen fields. We help students understand their options, align their passions with practical career paths, and make informed decisions that set them up for long-term success and fulfillment.",
+        "education-careers.focus.tag": "Key Focus Areas",
+        "education-careers.focus.title": "How We Make a Difference",
+        "education-careers.focus.area1.title": "Academic Streams & Higher Education",
+        "education-careers.focus.area1.desc": "Guiding students through choosing the right academic stream and higher education options aligned with their interests and career goals.",
+        "education-careers.focus.area2.title": "Career Exploration & Planning",
+        "education-careers.focus.area2.desc": "Exploring diverse career fields, understanding job roles, industry trends, and required skills to make informed career choices.",
+        "education-careers.focus.area3.title": "Competitive Exams & Admissions",
+        "education-careers.focus.area3.desc": "Providing guidance on preparing for competitive exams, entrance tests, and navigating college admissions processes effectively.",
+        "education-careers.focus.area4.title": "Career Transitions & Growth",
+        "education-careers.focus.area4.desc": "Supporting professionals in career transitions, skill upgradation, and continuous learning for sustained career growth and fulfillment.",
+        "education-careers.cta.title": "Ready to Get Started?",
+        "education-careers.cta.text": "Join us in our mission to empower communities through knowledge and practical insights.",
+        "education-careers.cta.btn1": "Get in Touch",
+        "education-careers.cta.btn2": "Learn More About BR27",
+        "footer.tagline": "Empowering minds. Enabling progress.",
+        "footer.quicklinks": "Quick Links",
+        "footer.focusareas": "Focus Areas",
+        "footer.connect": "Connect",
+        "footer.contactus": "Contact Us",
+        "footer.copyright": "© 2025 BR27. All rights reserved. Building a confident, future-ready ecosystem.",
+        "focus.tech.title": "Technology",
+        "focus.gov.title": "Governance",
+        "focus.skills.title": "Skills Development",
+        "focus.rural.title": "Rural Development",
+        "focus.finance.title": "Financial Awareness",
+        "focus.edu.title": "Education & Careers"
     },
-    rural: {
-        hero: {
-            title: { 
-                en: "Rural Development",
-                hi: "ग्रामीण विकास"
-            },
-            subtitle: {
-                en: "Empowering rural communities with knowledge, resources, and pathways to sustainable growth and prosperity.",
-                hi: "ग्रामीण समुदायों को ज्ञान, संसाधन और टिकाऊ विकास और समृद्धि के मार्गों के साथ सशक्त बनाना।"
-            }
-        },
-        mission: {
-            tag: { en: "Our Mission", hi: "हमारा मिशन" },
-            title: { en: "Building Prosperous Rural Communities", hi: "समृद्ध ग्रामीण समुदायों का निर्माण" },
-            text1: {
-                en: "Rural communities are the backbone of our nation, yet they often face unique challenges in accessing information, resources, and opportunities. BR27 is committed to bridging this gap by bringing actionable knowledge and practical solutions directly to rural areas.",
-                hi: "ग्रामीण समुदाय हमारे राष्ट्र की रीढ़ हैं, फिर भी वे अक्सर सूचना, संसाधनों और अवसरों तक पहुंचने में अनूठी चुनौतियों का सामना करते हैं। BR27 व्यावहारिक ज्ञान और व्यावहारिक समाधान सीधे ग्रामीण क्षेत्रों में लाकर इस अंतर को पाटने के लिए प्रतिबद्ध है।"
-            },
-            text2: {
-                en: "We believe that sustainable rural development begins with empowering individuals with the right information at the right time. Through education, awareness, and community engagement, we aim to create pathways for rural communities to thrive in the modern economy while preserving their cultural heritage and values.",
-                hi: "हम मानते हैं कि सतत ग्रामीण विकास सही समय पर सही जानकारी के साथ व्यक्तियों को सशक्त बनाने से शुरू होता है। शिक्षा, जागरूकता और सामुदायिक भागीदारी के माध्यम से, हम ग्रामीण समुदायों के लिए आधुनिक अर्थव्यवस्था में उनकी सांस्कृतिक विरासत और मूल्यों को संरक्षित करते हुए समृद्ध होने के मार्ग बनाने का लक्ष्य रखते हैं।"
-            },
-            stat1: {
-                title: { en: "Agriculture", hi: "कृषि" },
-                text: { en: "Modern farming techniques and sustainable practices", hi: "आधुनिक खेती तकनीक और स्थायी प्रथाएं" }
-            },
-            stat2: {
-                title: { en: "Innovation", hi: "नवाचार" },
-                text: { en: "Technology adoption for rural transformation", hi: "ग्रामीण परिवर्तन के लिए प्रौद्योगिकी अपनाना" }
-            },
-            stat3: {
-                title: { en: "Community", hi: "समुदाय" },
-                text: { en: "Collective growth through collaboration", hi: "सहयोग के माध्यम से सामूहिक विकास" }
-            }
-        },
-        focus: {
-            tag: { en: "Key Focus Areas", hi: "प्रमुख फोकस क्षेत्र" },
-            title: { en: "How We Empower Rural Communities", hi: "हम ग्रामीण समुदायों को कैसे सशक्त बनाते हैं" },
-            education: {
-                title: { en: "Education & Skill Development", hi: "शिक्षा और कौशल विकास" },
-                text: {
-                    en: "Providing access to quality education, vocational training, and skill development programs that equip rural youth and adults with competencies needed for modern job markets and entrepreneurship opportunities.",
-                    hi: "गुणवत्तापूर्ण शिक्षा, व्यावसायिक प्रशिक्षण और कौशल विकास कार्यक्रमों तक पहुंच प्रदान करना जो ग्रामीण युवाओं और वयस्कों को आधुनिक नौकरी बाजार और उद्यमिता के अवसरों के लिए आवश्यक दक्षताओं से लैस करते हैं।"
-                }
-            },
-            digital: {
-                title: { en: "Digital Literacy & Technology", hi: "डिजिटल साक्षरता और प्रौद्योगिकी" },
-                text: {
-                    en: "Bridging the digital divide by promoting digital literacy, internet access, and adoption of technology in farming, business, healthcare, and education to connect rural areas with global opportunities.",
-                    hi: "डिजिटल साक्षरता, इंटरनेट पहुंच और खेती, व्यापार, स्वास्थ्य सेवा और शिक्षा में प्रौद्योगिकी को अपनाने को बढ़ावा देकर डिजिटल विभाजन को पाटना ताकि ग्रामीण क्षेत्रों को वैश्विक अवसरों से जोड़ा जा सके।"
-                }
-            },
-            agriculture: {
-                title: { en: "Sustainable Agriculture", hi: "सतत कृषि" },
-                text: {
-                    en: "Sharing knowledge about modern farming techniques, organic practices, water conservation, crop diversification, and market linkages to improve agricultural productivity and farmer incomes sustainably.",
-                    hi: "आधुनिक खेती तकनीकों, जैविक प्रथाओं, जल संरक्षण, फसल विविधीकरण और बाजार संपर्क के बारे में ज्ञान साझा करना ताकि कृषि उत्पादकता और किसान आय में स्थायी रूप से सुधार हो सके।"
-                }
-            },
-            health: {
-                title: { en: "Healthcare & Wellness", hi: "स्वास्थ्य सेवा और कल्याण" },
-                text: {
-                    en: "Raising awareness about preventive healthcare, nutrition, sanitation, maternal and child health, and facilitating access to medical services and health insurance schemes for rural families.",
-                    hi: "निवारक स्वास्थ्य देखभाल, पोषण, स्वच्छता, मातृ और शिशु स्वास्थ्य के बारे में जागरूकता बढ़ाना और ग्रामीण परिवारों के लिए चिकित्सा सेवाओं और स्वास्थ्य बीमा योजनाओं तक पहुंच की सुविधा प्रदान करना।"
-                }
-            },
-            finance: {
-                title: { en: "Financial Inclusion", hi: "वित्तीय समावेशन" },
-                text: {
-                    en: "Educating rural communities about banking services, savings, credit facilities, government schemes, insurance, and digital payments to improve financial security and economic participation.",
-                    hi: "ग्रामीण समुदायों को बैंकिंग सेवाओं, बचत, ऋण सुविधाओं, सरकारी योजनाओं, बीमा और डिजिटल भुगतान के बारे में शिक्षित करना ताकि वित्तीय सुरक्षा और आर्थिक भागीदारी में सुधार हो सके।"
-                }
-            },
-            entrepreneurship: {
-                title: { en: "Entrepreneurship & Livelihood", hi: "उद्यमिता और आजीविका" },
-                text: {
-                    en: "Supporting rural entrepreneurs with business ideas, training, market access, and information about funding opportunities to create sustainable livelihoods and economic growth in villages.",
-                    hi: "ग्रामीण उद्यमियों को व्यापार विचारों, प्रशिक्षण, बाजार पहुंच और गांवों में स्थायी आजीविका और आर्थिक विकास बनाने के लिए वित्त पोषण के अवसरों के बारे में जानकारी के साथ समर्थन करना।"
-                }
-            }
-        },
-        approach: {
-            tag: { en: "Our Approach", hi: "हमारा दृष्टिकोण" },
-            title: { en: "From Knowledge to Action", hi: "ज्ञान से कार्य तक" },
-            step1: {
-                title: { en: "Awareness & Education", hi: "जागरूकता और शिक्षा" },
-                text: {
-                    en: "Creating awareness about opportunities, rights, schemes, and best practices through accessible content in local languages.",
-                    hi: "स्थानीय भाषाओं में सुलभ सामग्री के माध्यम से अवसरों, अधिकारों, योजनाओं और सर्वोत्तम प्रथाओं के बारे में जागरूकता पैदा करना।"
-                }
-            },
-            step2: {
-                title: { en: "Skill Building", hi: "कौशल निर्माण" },
-                text: {
-                    en: "Providing practical training and resources to develop skills that are relevant and marketable in today's economy.",
-                    hi: "आज की अर्थव्यवस्था में प्रासंगिक और विपणन योग्य कौशल विकसित करने के लिए व्यावहारिक प्रशिक्षण और संसाधन प्रदान करना।"
-                }
-            },
-            step3: {
-                title: { en: "Resource Connection", hi: "संसाधन कनेक्शन" },
-                text: {
-                    en: "Connecting communities with government schemes, financial services, markets, and support networks.",
-                    hi: "समुदायों को सरकारी योजनाओं, वित्तीय सेवाओं, बाजारों और सहायता नेटवर्क से जोड़ना।"
-                }
-            },
-            step4: {
-                title: { en: "Sustainable Growth", hi: "सतत विकास" },
-                text: {
-                    en: "Fostering long-term prosperity through continuous learning, innovation, and community-driven development.",
-                    hi: "निरंतर सीखने, नवाचार और समुदाय-संचालित विकास के माध्यम से दीर्घकालिक समृद्धि को बढ़ावा देना।"
-                }
-            }
-        },
-        cta: {
-            title: {
-                en: "Join Us in Empowering Rural India",
-                hi: "ग्रामीण भारत को सशक्त बनाने में हमारे साथ शामिल हों"
-            },
-            text: {
-                en: "Together, we can create sustainable pathways for rural communities to thrive and prosper.",
-                hi: "एक साथ, हम ग्रामीण समुदायों के फलने-फूलने और समृद्ध होने के लिए टिकाऊ मार्ग बना सकते हैं।"
-            },
-            btn1: { en: "Get in Touch", hi: "संपर्क में रहें" },
-            btn2: { en: "Learn More About BR27", hi: "BR27 के बारे में और जानें" }
-        }
+    hi: {
+        "nav.home": "होम",
+        "nav.about": "हमारे बारे में",
+        "nav.focus": "फोकस क्षेत्र",
+        "nav.contact": "संपर्क करें",
+        "breadcrumb.home": "होम",
+        "breadcrumb.focus": "फोकस क्षेत्र",
+        "breadcrumb.education-careers": "शिक्षा पथ और करियर",
+        "education-careers.hero.title": "शिक्षा पथ और करियर",
+        "education-careers.hero.subtitle": "छात्रों को शैक्षिक विकल्पों, करियर के अवसरों और उनके चुने हुए क्षेत्रों में सफलता के मार्गों के माध्यम से मार्गदर्शन करना।",
+        "education-careers.mission.tag": "हमारा मिशन",
+        "education-careers.mission.title": "अपने भविष्य को नेविगेट करना",
+        "education-careers.mission.desc": "सही शैक्षिक पथ और करियर चुनना भारी हो सकता है। BR27 छात्रों को शैक्षिक विकल्पों, करियर के अवसरों और उनके चुने हुए क्षेत्रों में सफलता के मार्गों के माध्यम से व्यापक मार्गदर्शन प्रदान करता है। हम छात्रों को उनके विकल्पों को समझने, उनके जुनून को व्यावहारिक करियर मार्गों के साथ संरेखित करने और ऐसे सूचित निर्णय लेने में मदद करते हैं जो उन्हें दीर्घकालिक सफलता और पूर्ति के लिए तैयार करते हैं।",
+        "education-careers.focus.tag": "मुख्य फोकस क्षेत्र",
+        "education-careers.focus.title": "हम कैसे बदलाव लाते हैं",
+        "education-careers.focus.area1.title": "शैक्षणिक धाराएं और उच्च शिक्षा",
+        "education-careers.focus.area1.desc": "छात्रों को उनकी रुचियों और करियर लक्ष्यों के साथ संरेखित सही शैक्षणिक धारा और उच्च शिक्षा विकल्प चुनने में मार्गदर्शन करना।",
+        "education-careers.focus.area2.title": "करियर अन्वेषण और योजना",
+        "education-careers.focus.area2.desc": "विविध करियर क्षेत्रों की खोज करना, नौकरी की भूमिकाओं, उद्योग के रुझानों और आवश्यक कौशल को समझना ताकि सूचित करियर विकल्प बनाए जा सकें।",
+        "education-careers.focus.area3.title": "प्रतियोगी परीक्षाएं और प्रवेश",
+        "education-careers.focus.area3.desc": "प्रतियोगी परीक्षाओं की तैयारी, प्रवेश परीक्षणों और कॉलेज प्रवेश प्रक्रियाओं को प्रभावी ढंग से नेविगेट करने पर मार्गदर्शन प्रदान करना।",
+        "education-careers.focus.area4.title": "करियर परिवर्तन और विकास",
+        "education-careers.focus.area4.desc": "निरंतर करियर विकास और पूर्ति के लिए करियर परिवर्तन, कौशल उन्नयन और निरंतर सीखने में पेशेवरों का समर्थन करना।",
+        "education-careers.cta.title": "शुरू करने के लिए तैयार हैं?",
+        "education-careers.cta.text": "ज्ञान और व्यावहारिक अंतर्दृष्टि के माध्यम से समुदायों को सशक्त बनाने के हमारे मिशन में हमारे साथ शामिल हों।",
+        "education-careers.cta.btn1": "संपर्क करें",
+        "education-careers.cta.btn2": "BR27 के बारे में अधिक जानें",
+        "footer.tagline": "मन को सशक्त बनाना। प्रगति को सक्षम बनाना।",
+        "footer.quicklinks": "त्वरित लिंक",
+        "footer.focusareas": "फोकस क्षेत्र",
+        "footer.connect": "जुड़ें",
+        "footer.contactus": "संपर्क करें",
+        "footer.copyright": "© 2025 BR27. सर्वाधिकार सुरक्षित। एक आत्मविश्वासी, भविष्य के लिए तैयार पारिस्थितिकी तंत्र का निर्माण।",
+        "focus.tech.title": "प्रौद्योगिकी",
+        "focus.gov.title": "शासन",
+        "focus.skills.title": "कौशल विकास",
+        "focus.rural.title": "ग्रामीण विकास",
+        "focus.finance.title": "वित्तीय जागरूकता",
+        "focus.edu.title": "शिक्षा और करियर"
     }
 };
 
-// Extend translations object from main script
-if (typeof translations !== 'undefined') {
-    // Merge rural translations with main translations
-    Object.keys(ruralTranslations).forEach(key => {
-        if (!translations.en[key]) {
-            translations.en[key] = {};
-            translations.hi[key] = {};
+let currentLanguage = localStorage.getItem('br27-language') || 'en';
+
+function applyTranslations(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('br27-language', lang);
+    document.documentElement.lang = lang;
+    
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
         }
-        Object.keys(ruralTranslations[key]).forEach(subKey => {
-            if (typeof ruralTranslations[key][subKey].en !== 'undefined') {
-                translations.en[key][subKey] = ruralTranslations[key][subKey].en;
-                translations.hi[key][subKey] = ruralTranslations[key][subKey].hi;
-            } else {
-                translations.en[key][subKey] = {};
-                translations.hi[key][subKey] = {};
-                Object.keys(ruralTranslations[key][subKey]).forEach(prop => {
-                    if (typeof ruralTranslations[key][subKey][prop].en !== 'undefined') {
-                        translations.en[key][subKey][prop] = ruralTranslations[key][subKey][prop].en;
-                        translations.hi[key][subKey][prop] = ruralTranslations[key][subKey][prop].hi;
-                    } else {
-                        translations.en[key][subKey][prop] = ruralTranslations[key][subKey][prop];
-                        translations.hi[key][subKey][prop] = ruralTranslations[key][subKey][prop];
-                    }
-                });
+    });
+    
+    const langText = document.getElementById('langText');
+    if (langText) langText.textContent = lang === 'en' ? 'हिंदी' : 'English';
+}
+
+// Apply saved language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    applyTranslations(currentLanguage);
+    
+    const languageToggle = document.getElementById('languageToggle');
+    if (languageToggle) {
+        languageToggle.addEventListener('click', function() {
+            applyTranslations(currentLanguage === 'en' ? 'hi' : 'en');
+        });
+    }
+    
+    // Mobile Navigation Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
+    
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
             }
         });
     });
-}
-
+});

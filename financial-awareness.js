@@ -1,163 +1,134 @@
-// Rural Development Page Translations
-const ruralTranslations = {
-    breadcrumb: {
-        home: { en: "Home", hi: "होम" },
-        rural: { en: "Rural Development", hi: "ग्रामीण विकास" }
+// Translations for financial-awareness page
+const translations = {
+    en: {
+        "nav.home": "Home",
+        "nav.about": "About",
+        "nav.focus": "Focus Areas",
+        "nav.contact": "Contact",
+        "breadcrumb.home": "Home",
+        "breadcrumb.focus": "Focus Areas",
+        "breadcrumb.financial-awareness": "Financial Awareness",
+        "financial-awareness.hero.title": "Financial Awareness",
+        "financial-awareness.hero.subtitle": "Building financial literacy from basics to smart investments, helping people make confident money decisions.",
+        "financial-awareness.mission.tag": "Our Mission",
+        "financial-awareness.mission.title": "Empowering Financial Independence",
+        "financial-awareness.mission.desc": "Financial literacy is the key to economic security and personal empowerment. BR27 is dedicated to building financial awareness from the basics of budgeting and saving to smart investments and wealth creation. We demystify complex financial concepts, helping people make confident, informed money decisions that can transform their lives and secure their futures.",
+        "financial-awareness.focus.tag": "Key Focus Areas",
+        "financial-awareness.focus.title": "How We Make a Difference",
+        "financial-awareness.focus.area1.title": "Budgeting & Saving Fundamentals",
+        "financial-awareness.focus.area1.desc": "Teaching practical budgeting strategies, saving habits, and expense management to build a strong financial foundation.",
+        "financial-awareness.focus.area2.title": "Investment & Wealth Creation",
+        "financial-awareness.focus.area2.desc": "Understanding investment options, risk management, and wealth-building strategies from stocks and mutual funds to real estate.",
+        "financial-awareness.focus.area3.title": "Financial Planning & Goals",
+        "financial-awareness.focus.area3.desc": "Creating comprehensive financial plans aligned with life goals, including retirement planning, children's education, and emergency funds.",
+        "financial-awareness.focus.area4.title": "Digital Finance & Banking",
+        "financial-awareness.focus.area4.desc": "Navigating digital payment systems, online banking, and fintech solutions safely and effectively for modern financial management.",
+        "financial-awareness.cta.title": "Ready to Get Started?",
+        "financial-awareness.cta.text": "Join us in our mission to empower communities through knowledge and practical insights.",
+        "financial-awareness.cta.btn1": "Get in Touch",
+        "financial-awareness.cta.btn2": "Learn More About BR27",
+        "footer.tagline": "Empowering minds. Enabling progress.",
+        "footer.quicklinks": "Quick Links",
+        "footer.focusareas": "Focus Areas",
+        "footer.connect": "Connect",
+        "footer.contactus": "Contact Us",
+        "footer.copyright": "© 2025 BR27. All rights reserved. Building a confident, future-ready ecosystem.",
+        "focus.tech.title": "Technology",
+        "focus.gov.title": "Governance",
+        "focus.skills.title": "Skills Development",
+        "focus.rural.title": "Rural Development",
+        "focus.finance.title": "Financial Awareness",
+        "focus.edu.title": "Education & Careers"
     },
-    rural: {
-        hero: {
-            title: { 
-                en: "Rural Development",
-                hi: "ग्रामीण विकास"
-            },
-            subtitle: {
-                en: "Empowering rural communities with knowledge, resources, and pathways to sustainable growth and prosperity.",
-                hi: "ग्रामीण समुदायों को ज्ञान, संसाधन और टिकाऊ विकास और समृद्धि के मार्गों के साथ सशक्त बनाना।"
-            }
-        },
-        mission: {
-            tag: { en: "Our Mission", hi: "हमारा मिशन" },
-            title: { en: "Building Prosperous Rural Communities", hi: "समृद्ध ग्रामीण समुदायों का निर्माण" },
-            text1: {
-                en: "Rural communities are the backbone of our nation, yet they often face unique challenges in accessing information, resources, and opportunities. BR27 is committed to bridging this gap by bringing actionable knowledge and practical solutions directly to rural areas.",
-                hi: "ग्रामीण समुदाय हमारे राष्ट्र की रीढ़ हैं, फिर भी वे अक्सर सूचना, संसाधनों और अवसरों तक पहुंचने में अनूठी चुनौतियों का सामना करते हैं। BR27 व्यावहारिक ज्ञान और व्यावहारिक समाधान सीधे ग्रामीण क्षेत्रों में लाकर इस अंतर को पाटने के लिए प्रतिबद्ध है।"
-            },
-            text2: {
-                en: "We believe that sustainable rural development begins with empowering individuals with the right information at the right time. Through education, awareness, and community engagement, we aim to create pathways for rural communities to thrive in the modern economy while preserving their cultural heritage and values.",
-                hi: "हम मानते हैं कि सतत ग्रामीण विकास सही समय पर सही जानकारी के साथ व्यक्तियों को सशक्त बनाने से शुरू होता है। शिक्षा, जागरूकता और सामुदायिक भागीदारी के माध्यम से, हम ग्रामीण समुदायों के लिए आधुनिक अर्थव्यवस्था में उनकी सांस्कृतिक विरासत और मूल्यों को संरक्षित करते हुए समृद्ध होने के मार्ग बनाने का लक्ष्य रखते हैं।"
-            },
-            stat1: {
-                title: { en: "Agriculture", hi: "कृषि" },
-                text: { en: "Modern farming techniques and sustainable practices", hi: "आधुनिक खेती तकनीक और स्थायी प्रथाएं" }
-            },
-            stat2: {
-                title: { en: "Innovation", hi: "नवाचार" },
-                text: { en: "Technology adoption for rural transformation", hi: "ग्रामीण परिवर्तन के लिए प्रौद्योगिकी अपनाना" }
-            },
-            stat3: {
-                title: { en: "Community", hi: "समुदाय" },
-                text: { en: "Collective growth through collaboration", hi: "सहयोग के माध्यम से सामूहिक विकास" }
-            }
-        },
-        focus: {
-            tag: { en: "Key Focus Areas", hi: "प्रमुख फोकस क्षेत्र" },
-            title: { en: "How We Empower Rural Communities", hi: "हम ग्रामीण समुदायों को कैसे सशक्त बनाते हैं" },
-            education: {
-                title: { en: "Education & Skill Development", hi: "शिक्षा और कौशल विकास" },
-                text: {
-                    en: "Providing access to quality education, vocational training, and skill development programs that equip rural youth and adults with competencies needed for modern job markets and entrepreneurship opportunities.",
-                    hi: "गुणवत्तापूर्ण शिक्षा, व्यावसायिक प्रशिक्षण और कौशल विकास कार्यक्रमों तक पहुंच प्रदान करना जो ग्रामीण युवाओं और वयस्कों को आधुनिक नौकरी बाजार और उद्यमिता के अवसरों के लिए आवश्यक दक्षताओं से लैस करते हैं।"
-                }
-            },
-            digital: {
-                title: { en: "Digital Literacy & Technology", hi: "डिजिटल साक्षरता और प्रौद्योगिकी" },
-                text: {
-                    en: "Bridging the digital divide by promoting digital literacy, internet access, and adoption of technology in farming, business, healthcare, and education to connect rural areas with global opportunities.",
-                    hi: "डिजिटल साक्षरता, इंटरनेट पहुंच और खेती, व्यापार, स्वास्थ्य सेवा और शिक्षा में प्रौद्योगिकी को अपनाने को बढ़ावा देकर डिजिटल विभाजन को पाटना ताकि ग्रामीण क्षेत्रों को वैश्विक अवसरों से जोड़ा जा सके।"
-                }
-            },
-            agriculture: {
-                title: { en: "Sustainable Agriculture", hi: "सतत कृषि" },
-                text: {
-                    en: "Sharing knowledge about modern farming techniques, organic practices, water conservation, crop diversification, and market linkages to improve agricultural productivity and farmer incomes sustainably.",
-                    hi: "आधुनिक खेती तकनीकों, जैविक प्रथाओं, जल संरक्षण, फसल विविधीकरण और बाजार संपर्क के बारे में ज्ञान साझा करना ताकि कृषि उत्पादकता और किसान आय में स्थायी रूप से सुधार हो सके।"
-                }
-            },
-            health: {
-                title: { en: "Healthcare & Wellness", hi: "स्वास्थ्य सेवा और कल्याण" },
-                text: {
-                    en: "Raising awareness about preventive healthcare, nutrition, sanitation, maternal and child health, and facilitating access to medical services and health insurance schemes for rural families.",
-                    hi: "निवारक स्वास्थ्य देखभाल, पोषण, स्वच्छता, मातृ और शिशु स्वास्थ्य के बारे में जागरूकता बढ़ाना और ग्रामीण परिवारों के लिए चिकित्सा सेवाओं और स्वास्थ्य बीमा योजनाओं तक पहुंच की सुविधा प्रदान करना।"
-                }
-            },
-            finance: {
-                title: { en: "Financial Inclusion", hi: "वित्तीय समावेशन" },
-                text: {
-                    en: "Educating rural communities about banking services, savings, credit facilities, government schemes, insurance, and digital payments to improve financial security and economic participation.",
-                    hi: "ग्रामीण समुदायों को बैंकिंग सेवाओं, बचत, ऋण सुविधाओं, सरकारी योजनाओं, बीमा और डिजिटल भुगतान के बारे में शिक्षित करना ताकि वित्तीय सुरक्षा और आर्थिक भागीदारी में सुधार हो सके।"
-                }
-            },
-            entrepreneurship: {
-                title: { en: "Entrepreneurship & Livelihood", hi: "उद्यमिता और आजीविका" },
-                text: {
-                    en: "Supporting rural entrepreneurs with business ideas, training, market access, and information about funding opportunities to create sustainable livelihoods and economic growth in villages.",
-                    hi: "ग्रामीण उद्यमियों को व्यापार विचारों, प्रशिक्षण, बाजार पहुंच और गांवों में स्थायी आजीविका और आर्थिक विकास बनाने के लिए वित्त पोषण के अवसरों के बारे में जानकारी के साथ समर्थन करना।"
-                }
-            }
-        },
-        approach: {
-            tag: { en: "Our Approach", hi: "हमारा दृष्टिकोण" },
-            title: { en: "From Knowledge to Action", hi: "ज्ञान से कार्य तक" },
-            step1: {
-                title: { en: "Awareness & Education", hi: "जागरूकता और शिक्षा" },
-                text: {
-                    en: "Creating awareness about opportunities, rights, schemes, and best practices through accessible content in local languages.",
-                    hi: "स्थानीय भाषाओं में सुलभ सामग्री के माध्यम से अवसरों, अधिकारों, योजनाओं और सर्वोत्तम प्रथाओं के बारे में जागरूकता पैदा करना।"
-                }
-            },
-            step2: {
-                title: { en: "Skill Building", hi: "कौशल निर्माण" },
-                text: {
-                    en: "Providing practical training and resources to develop skills that are relevant and marketable in today's economy.",
-                    hi: "आज की अर्थव्यवस्था में प्रासंगिक और विपणन योग्य कौशल विकसित करने के लिए व्यावहारिक प्रशिक्षण और संसाधन प्रदान करना।"
-                }
-            },
-            step3: {
-                title: { en: "Resource Connection", hi: "संसाधन कनेक्शन" },
-                text: {
-                    en: "Connecting communities with government schemes, financial services, markets, and support networks.",
-                    hi: "समुदायों को सरकारी योजनाओं, वित्तीय सेवाओं, बाजारों और सहायता नेटवर्क से जोड़ना।"
-                }
-            },
-            step4: {
-                title: { en: "Sustainable Growth", hi: "सतत विकास" },
-                text: {
-                    en: "Fostering long-term prosperity through continuous learning, innovation, and community-driven development.",
-                    hi: "निरंतर सीखने, नवाचार और समुदाय-संचालित विकास के माध्यम से दीर्घकालिक समृद्धि को बढ़ावा देना।"
-                }
-            }
-        },
-        cta: {
-            title: {
-                en: "Join Us in Empowering Rural India",
-                hi: "ग्रामीण भारत को सशक्त बनाने में हमारे साथ शामिल हों"
-            },
-            text: {
-                en: "Together, we can create sustainable pathways for rural communities to thrive and prosper.",
-                hi: "एक साथ, हम ग्रामीण समुदायों के फलने-फूलने और समृद्ध होने के लिए टिकाऊ मार्ग बना सकते हैं।"
-            },
-            btn1: { en: "Get in Touch", hi: "संपर्क में रहें" },
-            btn2: { en: "Learn More About BR27", hi: "BR27 के बारे में और जानें" }
-        }
+    hi: {
+        "nav.home": "होम",
+        "nav.about": "हमारे बारे में",
+        "nav.focus": "फोकस क्षेत्र",
+        "nav.contact": "संपर्क करें",
+        "breadcrumb.home": "होम",
+        "breadcrumb.focus": "फोकस क्षेत्र",
+        "breadcrumb.financial-awareness": "वित्तीय जागरूकता",
+        "financial-awareness.hero.title": "वित्तीय जागरूकता",
+        "financial-awareness.hero.subtitle": "बुनियादी बातों से लेकर स्मार्ट निवेश तक वित्तीय साक्षरता का निर्माण, लोगों को आत्मविश्वास से पैसे के फैसले लेने में मदद करना।",
+        "financial-awareness.mission.tag": "हमारा मिशन",
+        "financial-awareness.mission.title": "वित्तीय स्वतंत्रता को सशक्त बनाना",
+        "financial-awareness.mission.desc": "वित्तीय साक्षरता आर्थिक सुरक्षा और व्यक्तिगत सशक्तिकरण की कुंजी है। BR27 बजट और बचत की मूल बातों से लेकर स्मार्ट निवेश और धन सृजन तक वित्तीय जागरूकता बनाने के लिए समर्पित है। हम जटिल वित्तीय अवधारणाओं को सरल बनाते हैं, लोगों को आत्मविश्वास से, सूचित धन निर्णय लेने में मदद करते हैं जो उनके जीवन को बदल सकते हैं और उनके भविष्य को सुरक्षित कर सकते हैं।",
+        "financial-awareness.focus.tag": "मुख्य फोकस क्षेत्र",
+        "financial-awareness.focus.title": "हम कैसे बदलाव लाते हैं",
+        "financial-awareness.focus.area1.title": "बजट और बचत मूल बातें",
+        "financial-awareness.focus.area1.desc": "एक मजबूत वित्तीय नींव बनाने के लिए व्यावहारिक बजट रणनीतियों, बचत आदतों और खर्च प्रबंधन को सिखाना।",
+        "financial-awareness.focus.area2.title": "निवेश और धन सृजन",
+        "financial-awareness.focus.area2.desc": "स्टॉक और म्यूचुअल फंड से लेकर रियल एस्टेट तक निवेश विकल्पों, जोखिम प्रबंधन और धन-निर्माण रणनीतियों को समझना।",
+        "financial-awareness.focus.area3.title": "वित्तीय योजना और लक्ष्य",
+        "financial-awareness.focus.area3.desc": "सेवानिवृत्ति योजना, बच्चों की शिक्षा और आपातकालीन निधि सहित जीवन लक्ष्यों के साथ संरेखित व्यापक वित्तीय योजनाएं बनाना।",
+        "financial-awareness.focus.area4.title": "डिजिटल वित्त और बैंकिंग",
+        "financial-awareness.focus.area4.desc": "आधुनिक वित्तीय प्रबंधन के लिए डिजिटल भुगतान प्रणाली, ऑनलाइन बैंकिंग और फिनटेक समाधानों को सुरक्षित और प्रभावी ढंग से नेविगेट करना।",
+        "financial-awareness.cta.title": "शुरू करने के लिए तैयार हैं?",
+        "financial-awareness.cta.text": "ज्ञान और व्यावहारिक अंतर्दृष्टि के माध्यम से समुदायों को सशक्त बनाने के हमारे मिशन में हमारे साथ शामिल हों।",
+        "financial-awareness.cta.btn1": "संपर्क करें",
+        "financial-awareness.cta.btn2": "BR27 के बारे में अधिक जानें",
+        "footer.tagline": "मन को सशक्त बनाना। प्रगति को सक्षम बनाना।",
+        "footer.quicklinks": "त्वरित लिंक",
+        "footer.focusareas": "फोकस क्षेत्र",
+        "footer.connect": "जुड़ें",
+        "footer.contactus": "संपर्क करें",
+        "footer.copyright": "© 2025 BR27. सर्वाधिकार सुरक्षित। एक आत्मविश्वासी, भविष्य के लिए तैयार पारिस्थितिकी तंत्र का निर्माण।",
+        "focus.tech.title": "प्रौद्योगिकी",
+        "focus.gov.title": "शासन",
+        "focus.skills.title": "कौशल विकास",
+        "focus.rural.title": "ग्रामीण विकास",
+        "focus.finance.title": "वित्तीय जागरूकता",
+        "focus.edu.title": "शिक्षा और करियर"
     }
 };
 
-// Extend translations object from main script
-if (typeof translations !== 'undefined') {
-    // Merge rural translations with main translations
-    Object.keys(ruralTranslations).forEach(key => {
-        if (!translations.en[key]) {
-            translations.en[key] = {};
-            translations.hi[key] = {};
+let currentLanguage = localStorage.getItem('br27-language') || 'en';
+
+function applyTranslations(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('br27-language', lang);
+    document.documentElement.lang = lang;
+    
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
         }
-        Object.keys(ruralTranslations[key]).forEach(subKey => {
-            if (typeof ruralTranslations[key][subKey].en !== 'undefined') {
-                translations.en[key][subKey] = ruralTranslations[key][subKey].en;
-                translations.hi[key][subKey] = ruralTranslations[key][subKey].hi;
-            } else {
-                translations.en[key][subKey] = {};
-                translations.hi[key][subKey] = {};
-                Object.keys(ruralTranslations[key][subKey]).forEach(prop => {
-                    if (typeof ruralTranslations[key][subKey][prop].en !== 'undefined') {
-                        translations.en[key][subKey][prop] = ruralTranslations[key][subKey][prop].en;
-                        translations.hi[key][subKey][prop] = ruralTranslations[key][subKey][prop].hi;
-                    } else {
-                        translations.en[key][subKey][prop] = ruralTranslations[key][subKey][prop];
-                        translations.hi[key][subKey][prop] = ruralTranslations[key][subKey][prop];
-                    }
-                });
+    });
+    
+    const langText = document.getElementById('langText');
+    if (langText) langText.textContent = lang === 'en' ? 'हिंदी' : 'English';
+}
+
+// Apply saved language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    applyTranslations(currentLanguage);
+    
+    const languageToggle = document.getElementById('languageToggle');
+    if (languageToggle) {
+        languageToggle.addEventListener('click', function() {
+            applyTranslations(currentLanguage === 'en' ? 'hi' : 'en');
+        });
+    }
+    
+    // Mobile Navigation Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
+    
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
             }
         });
     });
-}
-
+});
