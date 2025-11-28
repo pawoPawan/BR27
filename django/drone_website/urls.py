@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('api/', include('api.urls')),
+    path('api/linkedin/', include('linkedin_feed.urls')),  # LinkedIn feed API
     path('portfolio/', include('portfolio.urls')),
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
     path('auth/', TemplateView.as_view(template_name='auth.html'), name='auth'),
