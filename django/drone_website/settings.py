@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'accounts',
     'portfolio',
     'api',
+    'linkedin_feed',
 ]
 
 MIDDLEWARE = [
