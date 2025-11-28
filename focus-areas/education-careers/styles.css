@@ -1,0 +1,713 @@
+/* ===== Education & Careers Page Styles ===== */
+
+/* Hero Section */
+.education-careers-hero.page-hero {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.education-careers-hero .hero-background {
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 60% 20%, rgba(162, 155, 254, 0.3) 0%, transparent 40%);
+    animation: backgroundPulse 8s ease-in-out infinite;
+}
+
+@keyframes backgroundPulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-stat {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.hero-stat:hover::before {
+    opacity: 1;
+}
+
+.hero-stat:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(108, 92, 231, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.hero-stat .stat-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    display: inline-block;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.hero-stat .stat-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-stat .stat-label {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Mission Section */
+.education-careers-mission {
+    background: var(--dark-surface);
+    position: relative;
+    overflow: hidden;
+}
+
+.education-careers-mission::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(108, 92, 231, 0.05), transparent);
+    animation: shimmer 8s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.education-careers-mission .mission-description {
+    font-size: 19px;
+    line-height: 2;
+    color: var(--text-secondary);
+    max-width: 950px;
+    margin: 40px auto 0;
+    text-align: center;
+    position: relative;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Why It Matters Section */
+.why-matters {
+    background: var(--dark-bg);
+    position: relative;
+}
+
+.why-matters::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(108, 92, 231, 0.08), transparent 70%);
+    pointer-events: none;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.impact-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 50px 35px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #6c5ce7, #a29bfe, #6c5ce7);
+    background-size: 200% 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.impact-card:hover::before {
+    opacity: 1;
+}
+
+.impact-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+    box-shadow: 0 25px 50px rgba(108, 92, 231, 0.25), 0 0 30px rgba(162, 155, 254, 0.15);
+    border-color: rgba(108, 92, 231, 0.3);
+}
+
+.impact-number {
+    font-size: 64px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 50%, #b8a6ff 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    animation: gradientFlow 4s ease infinite;
+    letter-spacing: -2px;
+}
+
+@keyframes gradientFlow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.impact-card h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.impact-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+/* Focus Areas Section */
+.education-careers-focus {
+    background: var(--dark-bg);
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    margin-top: 60px;
+}
+
+.focus-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px 30px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.focus-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(108, 92, 231, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.focus-card:hover::after {
+    opacity: 1;
+}
+
+.focus-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25), 0 0 20px rgba(108, 92, 231, 0.2);
+    border-color: rgba(108, 92, 231, 0.3);
+}
+
+.focus-card-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: all 0.4s ease;
+}
+
+.focus-card:hover .focus-card-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.4);
+}
+
+.focus-card-icon svg {
+    width: 36px;
+    height: 36px;
+    color: white;
+}
+
+.focus-card h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.focus-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.focus-card-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.example-tag {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.15), rgba(108, 92, 231, 0.08));
+    border: 2px solid rgba(108, 92, 231, 0.4);
+    border-radius: 20px;
+    font-size: 12px;
+    color: #b8a6ff;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.example-tag:hover {
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.25), rgba(108, 92, 231, 0.15));
+    border-color: rgba(108, 92, 231, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+}
+
+/* Education Made Simple Section */
+.education-simple {
+    background: linear-gradient(180deg, var(--dark-bg) 0%, var(--dark-surface) 100%);
+    position: relative;
+}
+
+.education-simple::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(108, 92, 231, 0.3), transparent);
+}
+
+.simple-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    margin-top: 60px;
+}
+
+.simple-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.simple-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(108, 92, 231, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.simple-card:hover::after {
+    opacity: 1;
+}
+
+.simple-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25), 0 0 20px rgba(108, 92, 231, 0.2);
+    border-color: rgba(108, 92, 231, 0.3);
+}
+
+.simple-icon {
+    font-size: 56px;
+    margin-bottom: 24px;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+.simple-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.complex-text {
+    font-size: 14px;
+    color: rgba(245, 87, 108, 0.9);
+    font-style: italic;
+    margin-bottom: 14px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, rgba(245, 87, 108, 0.15), rgba(245, 87, 108, 0.08));
+    border-left: 4px solid rgba(245, 87, 108, 0.6);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.simple-card:hover .complex-text {
+    background: linear-gradient(135deg, rgba(245, 87, 108, 0.2), rgba(245, 87, 108, 0.12));
+    transform: translateX(5px);
+}
+
+.arrow {
+    font-size: 28px;
+    text-align: center;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 20px 0;
+    font-weight: 700;
+    animation: arrowBounce 2s ease-in-out infinite;
+}
+
+@keyframes arrowBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+.simple-text {
+    font-size: 15px;
+    color: rgba(67, 233, 123, 1);
+    line-height: 1.8;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, rgba(67, 233, 123, 0.15), rgba(67, 233, 123, 0.08));
+    border-left: 4px solid rgba(67, 233, 123, 0.6);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.simple-card:hover .simple-text {
+    background: linear-gradient(135deg, rgba(67, 233, 123, 0.2), rgba(67, 233, 123, 0.12));
+    transform: translateX(5px);
+}
+
+/* Career Journey Section */
+.career-journey {
+    background: var(--dark-surface);
+}
+
+.journey-timeline {
+    max-width: 800px;
+    margin: 60px auto 0;
+}
+
+.journey-step {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.journey-step::before {
+    content: '';
+    position: absolute;
+    left: 35px;
+    top: 70px;
+    width: 2px;
+    height: calc(100% + 20px);
+    background: linear-gradient(180deg, rgba(108, 92, 231, 0.3), transparent);
+}
+
+.journey-step:last-child::before {
+    display: none;
+}
+
+.step-number {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.4);
+    transition: all 0.4s ease;
+}
+
+.journey-step:hover .step-number {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 15px 40px rgba(108, 92, 231, 0.5);
+}
+
+.step-content {
+    flex: 1;
+    padding: 10px 0;
+}
+
+.step-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.step-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+/* Success Stories Section */
+.success-stories {
+    background: var(--dark-bg);
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    margin-top: 60px;
+}
+
+.story-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.story-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.story-card:hover::before {
+    opacity: 1;
+}
+
+.story-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35), 0 0 30px rgba(108, 92, 231, 0.2);
+    border-color: rgba(108, 92, 231, 0.3);
+}
+
+.story-image {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 50%, #b8a6ff 100%);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-image::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 60%);
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.story-icon {
+    font-size: 90px;
+    position: relative;
+    z-index: 1;
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.05); }
+}
+
+.story-content {
+    padding: 30px;
+}
+
+.story-content h3 {
+    font-size: 20px;
+    margin-bottom: 14px;
+    color: var(--text-primary);
+}
+
+.story-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.story-impact {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, rgba(67, 233, 123, 0.15), rgba(67, 233, 123, 0.1));
+    border: 2px solid rgba(67, 233, 123, 0.4);
+    border-radius: 25px;
+    font-size: 13px;
+    color: #43e97b;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.story-card:hover .story-impact {
+    background: linear-gradient(135deg, rgba(67, 233, 123, 0.25), rgba(67, 233, 123, 0.15));
+    border-color: rgba(67, 233, 123, 0.6);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(67, 233, 123, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .simple-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .journey-step {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .journey-step::before {
+        left: 50%;
+        top: 80px;
+        transform: translateX(-50%);
+    }
+
+    .step-number {
+        margin: 0 auto;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-careers-hero.page-hero {
+        min-height: 60vh;
+    }
+
+    .hero-stat {
+        padding: 25px 20px;
+    }
+
+    .impact-number {
+        font-size: 48px;
+    }
+
+    .step-content h3 {
+        font-size: 20px;
+    }
+
+    .story-icon {
+        font-size: 70px;
+    }
+}

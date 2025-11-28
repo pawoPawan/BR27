@@ -1,0 +1,52 @@
+<!-- LinkedIn Feed Section - Drop this into any page -->
+<section class="linkedin-feed-section">
+    <div class="container">
+        <div class="linkedin-header">
+            <div class="linkedin-title-group">
+                <div class="linkedin-icon">
+                    <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2>Latest from BR27</h2>
+                    <p style="color: var(--text-secondary); margin: 0; font-size: 14px;">
+                        Follow our journey on LinkedIn
+                    </p>
+                </div>
+            </div>
+            <a href="https://www.linkedin.com/company/27br/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="linkedin-follow-btn">
+                <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+                Follow on LinkedIn
+            </a>
+        </div>
+        
+        <!-- Posts will be injected here -->
+        <div id="linkedin-feed-container"></div>
+    </div>
+</section>
+
+<!-- Include the styles and scripts -->
+<link rel="stylesheet" href="/components/linkedin-feed/linkedin-feed.css">
+<script src="/components/linkedin-feed/linkedin-feed.js"></script>
+<script>
+    // Initialize the LinkedIn feed
+    document.addEventListener('DOMContentLoaded', function() {
+        const linkedInFeed = new LinkedInFeed('linkedin-feed-container', {
+            postsToShow: 6,
+            dataSource: '/components/linkedin-feed/data/posts.json',
+            showEngagement: true,
+            autoRefresh: false // Set to true to auto-refresh every 5 minutes
+        });
+    });
+</script>
+

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BR27 LinkedIn Articles - All our latest insights on technology, governance, skills, rural development, and financial awareness.">
+    <title>LinkedIn Articles | BR27</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/components/linkedin-feed/linkedin-feed.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .articles-hero {
+            background: linear-gradient(135deg, #0077b5 0%, #0e5a87 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .articles-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            opacity: 0.1;
+        }
+
+        .articles-hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+        }
+
+        .articles-hero p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+
+        .linkedin-icon-large {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .articles-section {
+            padding: 80px 0;
+            background: var(--dark-bg);
+        }
+
+        .filter-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            padding: 10px 20px;
+            background: rgba(26, 26, 46, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .filter-tab:hover,
+        .filter-tab.active {
+            background: rgba(0, 119, 181, 0.2);
+            border-color: #0077b5;
+            color: #0077b5;
+        }
+
+        .articles-count {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .loading-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--text-secondary);
+        }
+
+        .load-more-btn {
+            display: block;
+            margin: 60px auto 0;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #0077b5 0%, #0e5a87 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .load-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 119, 181, 0.4);
+        }
+
+        .no-more-posts {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 40px 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .articles-hero h1 {
+                font-size: 32px;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/home" class="logo-link">
+                    <span class="logo-text">BR27</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/home#home" class="nav-link" data-translate="nav.home">Home</a></li>
+                <li><a href="/home#about" class="nav-link" data-translate="nav.about">About</a></li>
+                <li><a href="/home#focus" class="nav-link" data-translate="nav.focus">Focus Areas</a></li>
+                <li><a href="/home#contact" class="nav-link" data-translate="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="languageToggle" class="language-toggle" aria-label="Switch Language">
+                    <span class="lang-icon">🌐</span>
+                    <span class="lang-text" id="langText">हिंदी</span>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="articles-hero">
+        <div class="container">
+            <div class="linkedin-icon-large">
+                <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+            </div>
+            <h1>BR27 LinkedIn Articles</h1>
+            <p>Insights on technology, governance, skills, rural development, and financial awareness</p>
+            <a href="https://www.linkedin.com/company/27br/" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="linkedin-follow-btn">
+                Follow Us on LinkedIn
+            </a>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles-section">
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Articles</button>
+                    <button class="filter-tab" data-filter="recent">Most Recent</button>
+                    <button class="filter-tab" data-filter="popular">Popular</button>
+                </div>
+                <div class="articles-count" id="articlesCount">
+                    Loading articles...
+                </div>
+            </div>
+
+            <!-- Articles Grid -->
+            <div id="articlesContainer" class="loading-state">
+                <div class="spinner-icon">⏳</div>
+                <p>Fetching LinkedIn articles...</p>
+            </div>
+
+            <!-- Load More Button -->
+            <button id="loadMoreBtn" class="load-more-btn" style="display: none;">
+                Load More Articles
+            </button>
+            <div id="noMorePosts" class="no-more-posts" style="display: none;">
+                No more articles to load
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">BR27</h3>
+                    <p>Empowering minds. Enabling progress.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/home#about">About</a></li>
+                        <li><a href="/home#focus">Focus Areas</a></li>
+                        <li><a href="/home#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/company/27br/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.youtube.com/@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BR27. All rights reserved. Building a confident, future-ready ecosystem.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script src="/components/linkedin-feed/linkedin-feed.js"></script>
+    <script>
+        let currentPage = 1;
+        const postsPerPage = 9;
+        let allPosts = [];
+        let filteredPosts = [];
+
+        async function fetchAllPosts() {
+            try {
+                const response = await fetch(`/api/linkedin/posts/?count=20`);
+                const data = await response.json();
+                
+                if (data.success && data.posts) {
+                    allPosts = data.posts;
+                    filteredPosts = [...allPosts];
+                    renderPosts();
+                    updateCount();
+                } else {
+                    showError('Unable to load articles');
+                }
+            } catch (error) {
+                console.error('Error fetching posts:', error);
+                showError('Error loading articles. Please try again later.');
+            }
+        }
+
+        function renderPosts(append = false) {
+            const container = document.getElementById('articlesContainer');
+            const start = append ? (currentPage - 1) * postsPerPage : 0;
+            const end = currentPage * postsPerPage;
+            const postsToShow = filteredPosts.slice(start, end);
+
+            if (postsToShow.length === 0 && !append) {
+                container.innerHTML = '<div class="loading-state"><p>No articles found</p></div>';
+                return;
+            }
+
+            const postsHTML = postsToShow.map(post => createPostCard(post)).join('');
+            
+            if (append) {
+                container.innerHTML += postsHTML;
+            } else {
+                container.innerHTML = `<div class="articles-grid">${postsHTML}</div>`;
+            }
+
+            // Show/hide load more button
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            const noMorePosts = document.getElementById('noMorePosts');
+            
+            if (end >= filteredPosts.length) {
+                loadMoreBtn.style.display = 'none';
+                noMorePosts.style.display = filteredPosts.length > postsPerPage ? 'block' : 'none';
+            } else {
+                loadMoreBtn.style.display = 'block';
+                noMorePosts.style.display = 'none';
+            }
+        }
+
+        function createPostCard(post) {
+            const imageHTML = post.image ? `<img src="${post.image}" alt="${post.title}" class="post-image" loading="lazy">` : '';
+            
+            return `
+                <article class="linkedin-post-card" onclick="window.open('${post.url}', '_blank')">
+                    <div class="post-header">
+                        <div class="post-date">📅 ${formatDate(post.date)}</div>
+                        <span class="post-badge">LinkedIn</span>
+                    </div>
+                    <h3 class="post-title">${post.title}</h3>
+                    <p class="post-excerpt">${post.excerpt}</p>
+                    ${imageHTML}
+                </article>
+            `;
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+
+        function updateCount() {
+            document.getElementById('articlesCount').textContent = 
+                `${filteredPosts.length} article${filteredPosts.length !== 1 ? 's' : ''} found`;
+        }
+
+        function showError(message) {
+            document.getElementById('articlesContainer').innerHTML = `
+                <div class="error-message">
+                    <div class="error-icon">⚠️</div>
+                    <p>${message}</p>
+                    <button onclick="location.reload()" class="retry-btn">Retry</button>
+                </div>
+            `;
+        }
+
+        // Filter tabs
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                currentPage = 1;
+                
+                if (filter === 'all') {
+                    filteredPosts = [...allPosts];
+                } else if (filter === 'recent') {
+                    filteredPosts = [...allPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+                } else if (filter === 'popular') {
+                    filteredPosts = [...allPosts].sort((a, b) => (b.likes || 0) - (a.likes || 0));
+                }
+                
+                renderPosts();
+                updateCount();
+            });
+        });
+
+        // Load more button
+        document.getElementById('loadMoreBtn').addEventListener('click', function() {
+            currentPage++;
+            renderPosts(true);
+        });
+
+        // Initialize
+        fetchAllPosts();
+    </script>
+</body>
+</html>
+

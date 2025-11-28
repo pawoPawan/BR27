@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BR27 Financial Awareness - Building financial literacy from basics to smart investments, helping people make confident money decisions.">
+    <title>Financial Awareness | BR27</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../../home" class="logo-link">
+                    <span class="logo-text">BR27</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../home" class="nav-link" data-translate="nav.home">Home</a></li>
+                <li><a href="../../home#about" class="nav-link" data-translate="nav.about">About</a></li>
+                <li><a href="../../home#focus" class="nav-link" data-translate="nav.focus">Focus Areas</a></li>
+                <li><a href="../../home#contact" class="nav-link" data-translate="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="languageToggle" class="language-toggle" aria-label="Switch Language">
+                    <span class="lang-icon">🌐</span>
+                    <span class="lang-text" id="langText">हिंदी</span>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="financial-awareness-hero page-hero">
+        <div class="hero-background"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="container hero-content">
+            <div class="breadcrumb">
+                <a href="../../home" data-translate="breadcrumb.home">Home</a>
+                <span class="separator">›</span>
+                <a href="../../home#focus" data-translate="breadcrumb.focus">Focus Areas</a>
+                <span class="separator">›</span>
+                <span data-translate="breadcrumb.financial-awareness">Financial Awareness</span>
+            </div>
+            <h1 class="page-title fade-in">
+                <span class="highlight" data-translate="financial-awareness.hero.title">Financial Awareness</span>
+            </h1>
+            <p class="page-subtitle fade-in-delay" data-translate="financial-awareness.hero.subtitle">
+                Building financial literacy from basics to smart investments, helping people make confident money decisions.
+            </p>
+            <div class="hero-stats fade-in-delay-2">
+                <div class="hero-stat">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-value" data-translate="financial-awareness.hero.stat1">Smart</div>
+                    <div class="stat-label" data-translate="financial-awareness.hero.stat1label">Money Management</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-value" data-translate="financial-awareness.hero.stat2">Informed</div>
+                    <div class="stat-label" data-translate="financial-awareness.hero.stat2label">Investment Choices</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-value" data-translate="financial-awareness.hero.stat3">Confident</div>
+                    <div class="stat-label" data-translate="financial-awareness.hero.stat3label">Financial Future</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="financial-awareness-mission section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="financial-awareness.mission.tag">Our Mission</span>
+                <h2 class="section-title" data-translate="financial-awareness.mission.title">Empowering Financial Independence</h2>
+            </div>
+            <div class="mission-content">
+                <p class="mission-description" data-translate="financial-awareness.mission.desc">
+                    Financial literacy is the foundation of economic independence and security. BR27 is dedicated to building financial awareness from basic money management to smart investment strategies, helping people make confident and informed financial decisions. We believe that everyone deserves to understand how money works and how to make it work for them, regardless of their current economic status or education level.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why It Matters Section -->
+    <section class="why-matters section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="financial-awareness.why.tag">Impact</span>
+                <h2 class="section-title" data-translate="financial-awareness.why.title">Why Financial Literacy Matters</h2>
+                <p class="section-description" data-translate="financial-awareness.why.desc">Understanding money isn't just about wealth—it's about freedom, security, and opportunities.</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="financial-awareness.why.card1.number">76%</div>
+                    <h3 data-translate="financial-awareness.why.card1.title">Indians Are Financially Illiterate</h3>
+                    <p data-translate="financial-awareness.why.card1.desc">Only 24% of Indian adults are financially literate, leaving millions vulnerable to poor money decisions and scams.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="financial-awareness.why.card2.number">₹5L</div>
+                    <h3 data-translate="financial-awareness.why.card2.title">Average Debt Per Household</h3>
+                    <p data-translate="financial-awareness.why.card2.desc">Poor financial planning leads to crushing debt. Proper budgeting and saving can prevent this entirely.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="financial-awareness.why.card3.number">8-12%</div>
+                    <h3 data-translate="financial-awareness.why.card3.title">Returns from Smart Investing</h3>
+                    <p data-translate="financial-awareness.why.card3.desc">Simple, consistent investing beats keeping money idle. Start early, even with small amounts, and watch it grow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Focus Areas -->
+    <section class="financial-awareness-focus section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="financial-awareness.focus.tag">Key Focus Areas</span>
+                <h2 class="section-title" data-translate="financial-awareness.focus.title">Building Your Financial Foundation</h2>
+            </div>
+            <div class="focus-grid">
+                <div class="focus-card">
+                    <div class="focus-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="financial-awareness.focus.area1.title">Budgeting & Saving</h3>
+                    <p data-translate="financial-awareness.focus.area1.desc">
+                        Master the basics of tracking income, controlling expenses, and building an emergency fund for financial security.
+                    </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">50-30-20 Rule</span>
+                        <span class="example-tag">Emergency Fund</span>
+                        <span class="example-tag">Expense Tracking</span>
+                    </div>
+                </div>
+                <div class="focus-card">
+                    <div class="focus-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                            <line x1="1" y1="10" x2="23" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="financial-awareness.focus.area2.title">Banking & Digital Payments</h3>
+                    <p data-translate="financial-awareness.focus.area2.desc">
+                        Understanding bank accounts, credit cards, UPI, and digital wallets to manage money safely and conveniently.
+                    </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">UPI</span>
+                        <span class="example-tag">Net Banking</span>
+                        <span class="example-tag">Credit Score</span>
+                    </div>
+                </div>
+                <div class="focus-card">
+                    <div class="focus-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="financial-awareness.focus.area3.title">Smart Investments</h3>
+                    <p data-translate="financial-awareness.focus.area3.desc">
+                        Learning how to grow wealth through mutual funds, stocks, fixed deposits, and other investment vehicles.
+                    </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Mutual Funds</span>
+                        <span class="example-tag">SIP</span>
+                        <span class="example-tag">Stocks</span>
+                    </div>
+                </div>
+                <div class="focus-card">
+                    <div class="focus-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="financial-awareness.focus.area4.title">Insurance & Protection</h3>
+                    <p data-translate="financial-awareness.focus.area4.desc">
+                        Protecting yourself and family with health, life, and term insurance to avoid financial devastation from emergencies.
+                    </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Term Insurance</span>
+                        <span class="example-tag">Health Cover</span>
+                        <span class="example-tag">Risk Planning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finance Made Simple Section -->
+    <section class="finance-simple section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="financial-awareness.simple.tag">Simplified</span>
+                <h2 class="section-title" data-translate="financial-awareness.simple.title">Complex Finance, Simple Explanations</h2>
+                <p class="section-description" data-translate="financial-awareness.simple.desc">Breaking down intimidating financial concepts into everyday language anyone can understand.</p>
+            </div>
+            <div class="simple-grid">
+                <div class="simple-card">
+                    <div class="simple-icon">📈</div>
+                    <h3 data-translate="financial-awareness.simple.card1.title">Mutual Funds</h3>
+                    <p class="complex-text" data-translate="financial-awareness.simple.card1.complex">"Diversified portfolio allocation with NAV-based investment vehicles..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="financial-awareness.simple.card1.simple">A basket where many people pool money together, and an expert invests it in multiple companies. You own a small part of many businesses instead of risking everything on one.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">💳</div>
+                    <h3 data-translate="financial-awareness.simple.card2.title">Credit Score</h3>
+                    <p class="complex-text" data-translate="financial-awareness.simple.card2.complex">"CIBIL rating based on credit utilization and repayment history..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="financial-awareness.simple.card2.simple">Your financial report card (300-900). Banks check this before giving loans. Pay bills on time, don't max out cards, and it stays healthy. Bad score = loan rejection.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">🔄</div>
+                    <h3 data-translate="financial-awareness.simple.card3.title">SIP (Systematic Investment Plan)</h3>
+                    <p class="complex-text" data-translate="financial-awareness.simple.card3.complex">"Rupee cost averaging through periodic investment discipline..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="financial-awareness.simple.card3.simple">Auto-debit ₹500-5000 monthly from your account into mutual funds. Like a recurring deposit, but in the stock market. Start small, stay consistent, build wealth slowly.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">⏰</div>
+                    <h3 data-translate="financial-awareness.simple.card4.title">Compound Interest</h3>
+                    <p class="complex-text" data-translate="financial-awareness.simple.card4.complex">"Exponential growth through reinvested interest accumulation..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="financial-awareness.simple.card4.simple">Interest on interest. ₹10,000 at 10% becomes ₹11,000, then that ₹11,000 earns 10%. Money makes money. Start early, time does the magic.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Journey Section -->
+    <section class="financial-journey section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="financial-awareness.journey.tag">Your Path</span>
+                <h2 class="section-title" data-translate="financial-awareness.journey.title">Financial Independence Journey</h2>
+                <p class="section-description" data-translate="financial-awareness.journey.desc">Step-by-step roadmap from financial chaos to complete control.</p>
+            </div>
+            <div class="journey-timeline">
+                <div class="journey-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-translate="financial-awareness.journey.step1.title">Track & Budget</h3>
+                        <p data-translate="financial-awareness.journey.step1.desc">Write down every rupee you earn and spend for 1 month. See where money goes. Cut unnecessary expenses. Follow 50-30-20 rule: needs, wants, savings.</p>
+                    </div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-translate="financial-awareness.journey.step2.title">Build Emergency Fund</h3>
+                        <p data-translate="financial-awareness.journey.step2.desc">Save 6 months of expenses in a savings account or liquid fund. This protects you from job loss, medical emergencies, unexpected repairs.</p>
+                    </div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-translate="financial-awareness.journey.step3.title">Clear Bad Debt & Get Insurance</h3>
+                        <p data-translate="financial-awareness.journey.step3.desc">Pay off credit cards and personal loans first. Get term insurance (₹1 crore cover costs ₹500/month) and health insurance for family protection.</p>
+                    </div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-translate="financial-awareness.journey.step4.title">Start Investing Consistently</h3>
+                        <p data-translate="financial-awareness.journey.step4.desc">Begin SIP in index mutual funds with whatever you can afford—even ₹500/month. Increase annually. Let compounding work for 15-20 years.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="financial-awareness.stories.tag">Real Results</span>
+                <h2 class="section-title" data-translate="financial-awareness.stories.title">Financial Transformation Stories</h2>
+                <p class="section-description" data-translate="financial-awareness.stories.desc">See how financial literacy changed lives and created wealth.</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-icon">💼</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="financial-awareness.stories.story1.title">From ₹30K Debt to ₹10L Portfolio</h3>
+                        <p data-translate="financial-awareness.stories.story1.desc">Rahul cleared credit card debt using the avalanche method, then started ₹2000 monthly SIP. In 7 years, built a ₹10 lakh investment portfolio.</p>
+                        <div class="story-impact" data-translate="financial-awareness.stories.story1.impact">Result: Debt-free, Growing Wealth</div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-icon">🏠</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="financial-awareness.stories.story2.title">Homemaker Built ₹50L Corpus</h3>
+                        <p data-translate="financial-awareness.stories.story2.desc">Priya learned investing through free online courses, started with ₹1000/month from household savings. 12 years later, owns a ₹50 lakh portfolio.</p>
+                        <div class="story-impact" data-translate="financial-awareness.stories.story2.impact">Result: Financial Independence Achieved</div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-icon">🎓</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="financial-awareness.stories.story3.title">Retired Early at 45</h3>
+                        <p data-translate="financial-awareness.stories.story3.desc">Amit started investing 50% salary at age 25. Through disciplined SIPs and compound interest, built enough corpus to retire 15 years early.</p>
+                        <div class="story-impact" data-translate="financial-awareness.stories.story3.impact">Result: Early Retirement, Time Freedom</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-translate="financial-awareness.cta.title">Ready to Take Control of Your Money?</h2>
+                <p data-translate="financial-awareness.cta.text">Financial freedom starts with one decision: to learn. Whether you're starting from zero, drowning in debt, or ready to invest—we'll guide you step by step. Your prosperous future begins today.</p>
+                <div class="cta-buttons">
+                    <a href="../../home#contact" class="btn btn-primary btn-large" data-translate="financial-awareness.cta.btn1">Start Your Journey</a>
+                    <a href="../../home#about" class="btn btn-outline btn-large" data-translate="financial-awareness.cta.btn2">Learn More About BR27</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">BR27</h3>
+                    <p data-translate="footer.tagline">Empowering minds. Enabling progress.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/27br/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.quicklinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="../../home" data-translate="nav.home">Home</a></li>
+                        <li><a href="../../home#about" data-translate="nav.about">About</a></li>
+                        <li><a href="../../home#focus" data-translate="nav.focus">Focus Areas</a></li>
+                        <li><a href="../../home#contact" data-translate="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.focusareas">Focus Areas</h4>
+                    <ul>
+                        <li><a href="../technology/" data-translate="focus.tech.title">Technology</a></li>
+                        <li><a href="../governance/" data-translate="focus.gov.title">Governance</a></li>
+                        <li><a href="../skills-development/" data-translate="focus.skills.title">Skills Development</a></li>
+                        <li><a href="../rural-development/" data-translate="focus.rural.title">Rural Development</a></li>
+                        <li><a href="../financial-awareness/" data-translate="focus.finance.title">Financial Awareness</a></li>
+                        <li><a href="../education-careers/" data-translate="focus.edu.title">Education & Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.connect">Connect</h4>
+                    <ul>
+                        <li><a href="../../home#contact" data-translate="footer.contactus">Contact Us</a></li>
+                        <li><a href="https://www.linkedin.com/company/27br/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.youtube.com/@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">&copy; 2025 BR27. All rights reserved. Building a confident, future-ready ecosystem.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

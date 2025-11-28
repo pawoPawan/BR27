@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BR27 Education & Careers - Guiding students through educational choices, career opportunities, and pathways to success in their chosen fields.">
+    <title>Education & Careers | BR27</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../../home" class="logo-link">
+                    <span class="logo-text">BR27</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../../home" class="nav-link" data-translate="nav.home">Home</a></li>
+                <li><a href="../../home#about" class="nav-link" data-translate="nav.about">About</a></li>
+                <li><a href="../../home#focus" class="nav-link" data-translate="nav.focus">Focus Areas</a></li>
+                <li><a href="../../home#contact" class="nav-link" data-translate="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="languageToggle" class="language-toggle" aria-label="Switch Language">
+                    <span class="lang-icon">🌐</span>
+                    <span class="lang-text" id="langText">हिंदी</span>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="education-careers-hero page-hero">
+        <div class="hero-background"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="container hero-content">
+            <div class="breadcrumb">
+                <a href="../../home" data-translate="breadcrumb.home">Home</a>
+                <span class="separator">›</span>
+                <a href="../../home#focus" data-translate="breadcrumb.focus">Focus Areas</a>
+                <span class="separator">›</span>
+                <span data-translate="breadcrumb.education-careers">Education & Careers</span>
+            </div>
+            <h1 class="page-title fade-in">
+                <span class="highlight" data-translate="education-careers.hero.title">Education & Careers</span>
+            </h1>
+            <p class="page-subtitle fade-in-delay" data-translate="education-careers.hero.subtitle">
+                Guiding students through educational choices, career opportunities, and pathways to success in their chosen fields.
+            </p>
+            <div class="hero-stats fade-in-delay-2">
+                <div class="hero-stat">
+                    <div class="stat-icon">🎓</div>
+                    <div class="stat-value" data-translate="education-careers.hero.stat1">Informed</div>
+                    <div class="stat-label" data-translate="education-careers.hero.stat1label">Education Choices</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-value" data-translate="education-careers.hero.stat2">Guided</div>
+                    <div class="stat-label" data-translate="education-careers.hero.stat2label">Career Pathways</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-value" data-translate="education-careers.hero.stat3">Successful</div>
+                    <div class="stat-label" data-translate="education-careers.hero.stat3label">Future Ready</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="education-careers-mission section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="education-careers.mission.tag">Our Mission</span>
+                <h2 class="section-title" data-translate="education-careers.mission.title">Empowering Educational Decisions</h2>
+            </div>
+            <div class="mission-content">
+                <p class="mission-description" data-translate="education-careers.mission.desc">
+                    Choosing the right education and career path is one of life's most important decisions. BR27 is dedicated to guiding students through educational choices, career opportunities, and pathways to success in their chosen fields. We provide clarity on streams, colleges, entrance exams, and career options, helping students make informed decisions that align with their interests, strengths, and aspirations for a fulfilling future.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why It Matters Section -->
+    <section class="why-matters section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="education-careers.why.tag">Impact</span>
+                <h2 class="section-title" data-translate="education-careers.why.title">Why Career Guidance Matters</h2>
+                <p class="section-description" data-translate="education-careers.why.desc">The right guidance at the right time can completely transform your career trajectory and life.</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="education-careers.why.card1.number">70%</div>
+                    <h3 data-translate="education-careers.why.card1.title">Students Unsure of Career</h3>
+                    <p data-translate="education-careers.why.card1.desc">Most students choose careers based on peer pressure or family expectations, not their actual interests or market realities.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="education-careers.why.card2.number">50%</div>
+                    <h3 data-translate="education-careers.why.card2.title">Regret Their Course Choice</h3>
+                    <p data-translate="education-careers.why.card2.desc">Half of students regret their stream/course choice within 2 years due to lack of proper guidance and information.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number" data-translate="education-careers.why.card3.number">93%</div>
+                    <h3 data-translate="education-careers.why.card3.title">Need Career Counseling</h3>
+                    <p data-translate="education-careers.why.card3.desc">Students say they need better career counseling to make informed decisions about education and professional paths.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Focus Areas -->
+    <section class="education-careers-focus section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="education-careers.focus.tag">Key Focus Areas</span>
+                <h2 class="section-title" data-translate="education-careers.focus.title">Your Complete Career Guide</h2>
+            </div>
+            <div class="focus-grid">
+                <div class="focus-card">
+                    <div class="focus-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="education-careers.focus.area1.title">Stream & Course Selection</h3>
+                    <p data-translate="education-careers.focus.area1.desc">
+                        Understanding different streams (Science, Commerce, Arts) and courses to choose the right educational path based on interests and career goals.
+                    </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">10th After</span>
+                        <span class="example-tag">12th After</span>
+                        <span class="example-tag">Course Options</span>
+                    </div>
+                </div>
+                <div class="focus-card">
+                    <div class="focus-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="education-careers.focus.area2.title">College & University Guidance</h3>
+                    <p data-translate="education-careers.focus.area2.desc">
+                        Navigating entrance exams, college selection criteria, admission processes, and choosing the right institution for your career aspirations.
+                    </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">JEE/NEET</span>
+                        <span class="example-tag">College Rankings</span>
+                        <span class="example-tag">Admissions</span>
+                    </div>
+                </div>
+                <div class="focus-card">
+                    <div class="focus-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="education-careers.focus.area3.title">Career Exploration</h3>
+                    <p data-translate="education-careers.focus.area3.desc">
+                        Discovering diverse career options across industries, emerging fields, job market trends, and what different professions actually involve.
+                    </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Tech Careers</span>
+                        <span class="example-tag">Healthcare</span>
+                        <span class="example-tag">Creative Fields</span>
+                    </div>
+                </div>
+                <div class="focus-card">
+                    <div class="focus-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="education-careers.focus.area4.title">Skill Development for Careers</h3>
+                    <p data-translate="education-careers.focus.area4.desc">
+                        Building essential skills, certifications, internships, and practical experience that employers value and career advancement requires.
+                    </p>
+                    <div class="focus-card-examples">
+                        <span class="example-tag">Internships</span>
+                        <span class="example-tag">Certifications</span>
+                        <span class="example-tag">Projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Made Simple Section -->
+    <section class="education-simple section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="education-careers.simple.tag">Simplified</span>
+                <h2 class="section-title" data-translate="education-careers.simple.title">Complex Choices, Simple Clarity</h2>
+                <p class="section-description" data-translate="education-careers.simple.desc">Breaking down confusing education and career decisions into clear, actionable guidance.</p>
+            </div>
+            <div class="simple-grid">
+                <div class="simple-card">
+                    <div class="simple-icon">🤔</div>
+                    <h3 data-translate="education-careers.simple.card1.title">Science vs Commerce vs Arts</h3>
+                    <p class="complex-text" data-translate="education-careers.simple.card1.complex">"Career prospects, aptitude requirements, subject combinations..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="education-careers.simple.card1.simple">Science (if you like math/biology/solving problems), Commerce (if you like business/numbers/management), Arts (if you're creative/like social sciences). All have great careers—choose based on interest, not pressure.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">🎯</div>
+                    <h3 data-translate="education-careers.simple.card2.title">Engineering vs Medical</h3>
+                    <p class="complex-text" data-translate="education-careers.simple.card2.complex">"JEE/NEET preparation, branch selection, college tier importance..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="education-careers.simple.card2.simple">Engineering = Design/build things, 4 years, many branches, good placements. Medical = Treat people, 5.5+ years, intense study, service-oriented. Both respected—choose what excites you more, not what pays more.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">📚</div>
+                    <h3 data-translate="education-careers.simple.card3.title">Tier 1 vs Tier 2 vs Tier 3 Colleges</h3>
+                    <p class="complex-text" data-translate="education-careers.simple.card3.complex">"NIRF rankings, placement statistics, faculty quality, infrastructure..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="education-careers.simple.card3.simple">Tier 1 = IITs, NITs (best placements, brand). Tier 2 = State universities, good colleges (decent placements). Tier 3 = Local colleges (need self-learning). Success depends more on YOUR effort than college name.</p>
+                </div>
+                <div class="simple-card">
+                    <div class="simple-icon">💼</div>
+                    <h3 data-translate="education-careers.simple.card4.title">Job vs Higher Studies vs Entrepreneurship</h3>
+                    <p class="complex-text" data-translate="education-careers.simple.card4.complex">"ROI analysis, opportunity cost, career trajectory optimization..."</p>
+                    <div class="arrow">↓</div>
+                    <p class="simple-text" data-translate="education-careers.simple.card4.simple">Job = Immediate income, experience. Higher studies = Specialization, better long-term pay. Entrepreneurship = Build your own, high risk-reward. All valid—choose based on financial situation, goals, and risk appetite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Journey Section -->
+    <section class="career-journey section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="education-careers.journey.tag">Your Path</span>
+                <h2 class="section-title" data-translate="education-careers.journey.title">Career Planning Journey</h2>
+                <p class="section-description" data-translate="education-careers.journey.desc">Step-by-step roadmap from student to successful professional.</p>
+            </div>
+            <div class="journey-timeline">
+                <div class="journey-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-translate="education-careers.journey.step1.title">Self-Assessment (Class 9-10)</h3>
+                        <p data-translate="education-careers.journey.step1.desc">Identify interests, strengths, and values. Take aptitude tests. Talk to professionals in different fields. Don't rush—explore multiple options before deciding your stream.</p>
+                    </div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-translate="education-careers.journey.step2.title">Stream & Preparation (Class 11-12)</h3>
+                        <p data-translate="education-careers.journey.step2.desc">Focus on chosen stream. Prepare for entrance exams if needed. Research colleges, courses, and career paths. Build foundational skills and maintain good grades.</p>
+                    </div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-translate="education-careers.journey.step3.title">College & Skill Building (Graduation)</h3>
+                        <p data-translate="education-careers.journey.step3.desc">Excel academically but also do internships, projects, certifications. Build network, join clubs, develop soft skills. Learn beyond textbooks—online courses, workshops.</p>
+                    </div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-translate="education-careers.journey.step4.title">Career Launch & Growth</h3>
+                        <p data-translate="education-careers.journey.step4.desc">Land first job or pursue higher studies. Continuously upskill, network, and seek mentorship. Stay adaptable—your first career choice isn't forever. Keep learning and growing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-translate="education-careers.stories.tag">Inspiration</span>
+                <h2 class="section-title" data-translate="education-careers.stories.title">Success Through Smart Choices</h2>
+                <p class="section-description" data-translate="education-careers.stories.desc">See how informed decisions and proper guidance transformed student careers.</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-icon">💻</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="education-careers.stories.story1.title">Chose Arts, Built Tech Career</h3>
+                        <p data-translate="education-careers.stories.story1.desc">Anjali chose Arts stream against pressure, learned coding alongside, combined both for UX design career. Now earning ₹15L/year at a top startup.</p>
+                        <div class="story-impact" data-translate="education-careers.stories.story1.impact">Result: Following Passion, Financial Success</div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-icon">🏥</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="education-careers.stories.story2.title">Tier 3 College to Doctor</h3>
+                        <p data-translate="education-careers.stories.story2.desc">Vikram couldn't afford expensive coaching, studied hard at local college, cleared NEET in 2nd attempt, now a successful doctor serving his community.</p>
+                        <div class="story-impact" data-translate="education-careers.stories.story2.impact">Result: Persistence Pays, Dreams Achieved</div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <div class="story-icon">📱</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 data-translate="education-careers.stories.story3.title">Commerce + Skills = Startup Success</h3>
+                        <p data-translate="education-careers.stories.story3.desc">Neha took Commerce, learned digital marketing via online courses during college, started her agency at 23, now managing 50+ clients across India.</p>
+                        <div class="story-impact" data-translate="education-careers.stories.story3.impact">Result: Skills Over Degree, Entrepreneurial Win</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-translate="education-careers.cta.title">Ready to Plan Your Future?</h2>
+                <p data-translate="education-careers.cta.text">Your education and career choices shape your entire life. Don't leave them to chance or pressure. Whether you're choosing a stream, preparing for exams, or planning your career—we'll guide you with clarity, information, and practical advice. Your success story starts with one informed decision.</p>
+                <div class="cta-buttons">
+                    <a href="../../home#contact" class="btn btn-primary btn-large" data-translate="education-careers.cta.btn1">Get Career Guidance</a>
+                    <a href="../../home#about" class="btn btn-outline btn-large" data-translate="education-careers.cta.btn2">Learn More About BR27</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">BR27</h3>
+                    <p data-translate="footer.tagline">Empowering minds. Enabling progress.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/27br/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.quicklinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="../../home" data-translate="nav.home">Home</a></li>
+                        <li><a href="../../home#about" data-translate="nav.about">About</a></li>
+                        <li><a href="../../home#focus" data-translate="nav.focus">Focus Areas</a></li>
+                        <li><a href="../../home#contact" data-translate="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.focusareas">Focus Areas</h4>
+                    <ul>
+                        <li><a href="../technology/" data-translate="focus.tech.title">Technology</a></li>
+                        <li><a href="../governance/" data-translate="focus.gov.title">Governance</a></li>
+                        <li><a href="../skills-development/" data-translate="focus.skills.title">Skills Development</a></li>
+                        <li><a href="../rural-development/" data-translate="focus.rural.title">Rural Development</a></li>
+                        <li><a href="../financial-awareness/" data-translate="focus.finance.title">Financial Awareness</a></li>
+                        <li><a href="../education-careers/" data-translate="focus.edu.title">Education & Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.connect">Connect</h4>
+                    <ul>
+                        <li><a href="../../home#contact" data-translate="footer.contactus">Contact Us</a></li>
+                        <li><a href="https://www.linkedin.com/company/27br/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.youtube.com/@%E0%A4%AA%E0%A4%B2-%E0%A4%A6%E0%A5%8B-%E0%A4%AA%E0%A4%B2" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">&copy; 2025 BR27. All rights reserved. Building a confident, future-ready ecosystem.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
