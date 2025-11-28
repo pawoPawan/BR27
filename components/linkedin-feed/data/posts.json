@@ -1,0 +1,65 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Empowering Rural Communities Through Technology",
+      "excerpt": "Discover how digital literacy programs are transforming villages across India. Our latest initiative brings internet connectivity and tech training to 50+ rural communities.",
+      "date": "2025-11-25",
+      "url": "https://www.linkedin.com/company/27br/",
+      "image": null,
+      "likes": 156,
+      "comments": 23
+    },
+    {
+      "id": 2,
+      "title": "Career Guidance: Choosing the Right Stream After 10th",
+      "excerpt": "Science, Commerce, or Arts? Here's our comprehensive guide to help students make informed decisions based on their interests, not societal pressure.",
+      "date": "2025-11-22",
+      "url": "https://www.linkedin.com/company/27br/",
+      "image": null,
+      "likes": 203,
+      "comments": 45
+    },
+    {
+      "id": 3,
+      "title": "Financial Literacy Workshop - 200+ Participants",
+      "excerpt": "Our recent workshop on smart investing and savings strategies reached 200+ young professionals. Building financial awareness one session at a time.",
+      "date": "2025-11-18",
+      "url": "https://www.linkedin.com/company/27br/",
+      "image": null,
+      "likes": 178,
+      "comments": 31
+    },
+    {
+      "id": 4,
+      "title": "Understanding Governance: Your Rights & Responsibilities",
+      "excerpt": "Transparency in policy-making starts with informed citizens. Our latest blog breaks down complex government policies into actionable insights.",
+      "date": "2025-11-15",
+      "url": "https://www.linkedin.com/company/27br/",
+      "image": null,
+      "likes": 142,
+      "comments": 18
+    },
+    {
+      "id": 5,
+      "title": "Skills That Matter: Future-Proofing Your Career",
+      "excerpt": "In a rapidly changing job market, these 10 skills will keep you relevant. Our comprehensive guide to continuous learning and professional development.",
+      "date": "2025-11-12",
+      "url": "https://www.linkedin.com/company/27br/",
+      "image": null,
+      "likes": 267,
+      "comments": 52
+    },
+    {
+      "id": 6,
+      "title": "BR27 Community Milestone: 10,000 Lives Impacted",
+      "excerpt": "Celebrating our journey of empowering minds across India. Thank you to our community for making this possible. This is just the beginning!",
+      "date": "2025-11-08",
+      "url": "https://www.linkedin.com/company/27br/",
+      "image": null,
+      "likes": 523,
+      "comments": 89
+    }
+  ],
+  "lastUpdated": "2025-11-28"
+}

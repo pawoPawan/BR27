@@ -239,16 +239,16 @@ function applyTranslations(lang) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = translations[lang][key];
             } else {
-                element.textContent = translations[lang][key];
+            element.textContent = translations[lang][key];
             }
         }
     });
-
+    
     // Update language toggle text
     const langText = document.getElementById('langText');
     if (langText) {
         langText.textContent = lang === 'en' ? 'हिंदी' : 'English';
-    }
+}
 
     // Store language preference
     localStorage.setItem('preferredLanguage', lang);
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check for saved language preference
     const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     applyTranslations(savedLang);
-
+    
     // Language toggle
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
             applyTranslations(newLang);
         });
     }
-
+    
     // Mobile menu toggle
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
-
+    
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
             const isClickInsideNav = navMenu.contains(event.target);
