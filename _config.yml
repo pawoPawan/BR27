@@ -7,7 +7,6 @@ exclude:
   - MIGRATION_GUIDE.md
   - ARCHITECTURE.md
   - QUICK_START.md
-  - TROUBLESHOOTING.md
   - overview.txt
   - deploy-github.sh
   - setup.sh
@@ -16,10 +15,7 @@ exclude:
   - django/
   - templates/
   - scripts/
-  - components/linkedin-feed/docs/
-  - components/linkedin-feed/DYNAMIC_SETUP_GUIDE.md
   - components/linkedin-feed/README.md
-  - components/linkedin-feed/scripts/
   - docs/
   - .github/
 
