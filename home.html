@@ -60,6 +60,9 @@
         </div>
     </section>
 
+    <!-- LinkedIn Feed Section - Compact Top Position -->
+    {% include linkedin-feed.html posts_count="3" carousel="true" auto_refresh="true" %}
+
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
@@ -316,8 +319,6 @@
         </div>
     </section>
 
-    <!-- Dynamic Feeds - Configured in _data/feeds.yml -->
-    {% include feeds-loader.html page_type="home_page" position="before_footer" %}
 
     <!-- Footer -->
     <footer class="footer">

@@ -1,0 +1,272 @@
+/* Compact LinkedIn Feed - Top Position Design */
+
+.linkedin-feed-section {
+    padding: 40px 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03) 0%, rgba(118, 75, 162, 0.03) 100%);
+    border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.linkedin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.linkedin-title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.linkedin-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 119, 181, 0.3);
+}
+
+.linkedin-title-group h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.linkedin-title-group p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 2px 0 0 0;
+}
+
+.linkedin-follow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 119, 181, 0.2);
+}
+
+.linkedin-follow-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 119, 181, 0.3);
+}
+
+/* Compact Post Cards */
+.linkedin-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+}
+
+.linkedin-post {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: auto;
+    min-height: 120px;
+}
+
+.linkedin-post:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.post-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.post-avatar {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.post-meta {
+    flex: 1;
+    min-width: 0;
+}
+
+.post-author {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-primary);
+    margin: 0 0 2px 0;
+}
+
+.post-date {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
+.post-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.post-excerpt {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+}
+
+.post-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #0077b5;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: gap 0.3s ease;
+}
+
+.post-link:hover {
+    gap: 8px;
+}
+
+/* Remove stats (likes/comments) from compact view */
+.post-stats {
+    display: none !important;
+}
+
+/* Loading & Error States - Compact */
+.linkedin-loading,
+.linkedin-error {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.linkedin-loading p,
+.linkedin-error p {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* Carousel for Compact View */
+.linkedin-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    padding: 0 4px;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 16px;
+}
+
+.carousel-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(102, 126, 234, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.carousel-dot.active {
+    width: 20px;
+    border-radius: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Responsive - Compact Design */
+@media (max-width: 768px) {
+    .linkedin-feed-section {
+        padding: 30px 0;
+    }
+    
+    .linkedin-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .linkedin-title-group h2 {
+        font-size: 18px;
+    }
+    
+    .linkedin-posts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .linkedin-post {
+        min-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .linkedin-feed-section {
+        padding: 20px 0;
+    }
+    
+    .linkedin-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .post-title {
+        font-size: 13px;
+    }
+    
+    .post-excerpt {
+        font-size: 12px;
+    }
+}
+
