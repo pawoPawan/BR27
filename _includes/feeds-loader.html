@@ -1,0 +1,44 @@
+<!-- Dynamic Feed Loader - Loads feeds based on configuration -->
+<!-- Usage: {% include feeds-loader.html page_type="home_page" position="before_footer" %} -->
+
+{% assign page_type = include.page_type | default: "home_page" %}
+{% assign position = include.position | default: "before_footer" %}
+
+{% assign page_feeds = site.data.feeds[page_type] %}
+
+{% if page_feeds %}
+  {% for feed in page_feeds.feeds %}
+    {% if feed.enabled == true %}
+      
+      {% if include.position %}
+        {% if feed.position == include.position %}
+          {% case feed.type %}
+            {% when "linkedin" %}
+              {% include linkedin-feed.html 
+                 posts_count=feed.posts_count 
+                 carousel=feed.carousel 
+                 auto_refresh=feed.auto_refresh %}
+            
+            {% when "twitter" %}
+              <!-- Twitter feed include here -->
+              <!-- {% include twitter-feed.html %} -->
+            
+            {% when "youtube" %}
+              <!-- YouTube feed include here -->
+              <!-- {% include youtube-feed.html %} -->
+          {% endcase %}
+        {% endif %}
+      {% else %}
+        {% case feed.type %}
+          {% when "linkedin" %}
+            {% include linkedin-feed.html 
+               posts_count=feed.posts_count 
+               carousel=feed.carousel 
+               auto_refresh=feed.auto_refresh %}
+        {% endcase %}
+      {% endif %}
+      
+    {% endif %}
+  {% endfor %}
+{% endif %}
+

@@ -1,0 +1,36 @@
+# Feed Configuration
+# Control which feeds appear on which pages
+
+home_page:
+  feeds:
+    - type: linkedin
+      enabled: true
+      posts_count: 3
+      carousel: true
+      auto_refresh: true
+      position: before_footer  # Options: before_footer, after_impact, after_cta
+    
+    # Future feeds (disabled for now)
+    # - type: twitter
+    #   enabled: false
+    #   posts_count: 5
+    # 
+    # - type: youtube
+    #   enabled: false
+    #   videos_count: 3
+
+articles_page:
+  feeds:
+    - type: linkedin
+      enabled: true
+      posts_count: 20
+      carousel: false
+      grid: true
+
+focus_pages:
+  feeds:
+    - type: linkedin
+      enabled: true
+      posts_count: 3
+      carousel: false
+
