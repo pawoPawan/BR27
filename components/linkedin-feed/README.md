@@ -1,132 +1,110 @@
-# LinkedIn Feed Module for BR27 Website
+# LinkedIn Feed Component
 
-A modular, self-contained component to display LinkedIn posts on your website.
+A modular LinkedIn feed component that automatically fetches posts from your LinkedIn company page.
 
-## 📦 Module Structure
+## 🎯 Works on GitHub Pages!
 
-```
-components/linkedin-feed/
-├── linkedin-feed.css          # Component styles
-├── linkedin-feed.js           # Component logic
-├── data/
-│   └── posts.json            # LinkedIn posts data
-├── examples/
-│   ├── demo.html             # Live demo
-│   ├── integration-example.html
-│   └── section-snippet.html  # HTML snippet
-├── docs/
-│   ├── README.md             # This file
-│   ├── QUICK_START.md        # Quick reference
-│   └── INTEGRATION_GUIDE.md  # Detailed guide
-└── scripts/
-    └── update-posts.py       # Post management script
+This component has **3 modes**:
+
+### 1. **Client-Side Auto-Fetch** (✅ Works on GitHub Pages)
+```javascript
+// Automatically fetches from LinkedIn RSS in browser
+new LinkedInFeedClient('linkedin-feed-container', {
+    postsToShow: 3,
+    companyUrl: 'https://www.linkedin.com/company/27br/',
+    carousel: true
+});
 ```
 
-## 🚀 Quick Start
+### 2. **Static Mode** (✅ Works on GitHub Pages)
+```javascript
+// Uses static JSON file
+new LinkedInFeed('linkedin-feed-container', {
+    postsToShow: 3,
+    dataSource: '/components/linkedin-feed/data/posts.json'
+});
+```
 
-### 1. Include in Your Page
+### 3. **Dynamic Server Mode** (❌ Needs separate backend)
+```javascript
+// Requires Django backend deployed separately
+new LinkedInFeedDynamic('linkedin-feed-container', {
+    dataSource: 'https://your-backend.herokuapp.com/api/linkedin/posts/'
+});
+```
+
+---
+
+## 🚀 Quick Start (Auto-Fetch on GitHub Pages)
 
 ```html
-<!-- In <head> -->
+<!-- Include CSS -->
 <link rel="stylesheet" href="/components/linkedin-feed/linkedin-feed.css">
+<link rel="stylesheet" href="/components/linkedin-feed/linkedin-feed-carousel.css">
 
-<!-- Where you want the feed -->
+<!-- HTML Container -->
 <div id="linkedin-feed-container"></div>
 
-<!-- Before </body> -->
-<script src="/components/linkedin-feed/linkedin-feed.js"></script>
+<!-- Include Script -->
+<script src="/components/linkedin-feed/linkedin-feed-client.js"></script>
 <script>
-    new LinkedInFeed('linkedin-feed-container', {
-        postsToShow: 6,
-        dataSource: '/components/linkedin-feed/data/posts.json'
+    // Auto-fetches from LinkedIn!
+    new LinkedInFeedClient('linkedin-feed-container', {
+        postsToShow: 3,
+        companyUrl: 'https://www.linkedin.com/company/27br/',
+        carousel: true,
+        autoRefresh: true
     });
 </script>
 ```
 
-### 2. Update Posts
-
-```bash
-# Interactive update
-cd components/linkedin-feed/scripts
-python3 update-posts.py
-
-# Or edit directly
-nano components/linkedin-feed/data/posts.json
-```
-
-### 3. View Demo
-
-```bash
-# Open demo
-open components/linkedin-feed/examples/demo.html
-
-# Or with server
-http://localhost:8000/components/linkedin-feed/examples/demo.html
-```
-
-## 📚 Documentation
-
-- **Quick Start**: See `docs/QUICK_START.md` for fast setup
-- **Integration Guide**: See `docs/INTEGRATION_GUIDE.md` for detailed instructions
-- **Examples**: Check `examples/` folder for working examples
+---
 
 ## ⚙️ Configuration
 
 ```javascript
-new LinkedInFeed('container-id', {
-    postsToShow: 6,              // Number of posts
-    dataSource: '/components/linkedin-feed/data/posts.json',
-    showEngagement: true,        // Show likes/comments
-    autoRefresh: false,          // Auto-refresh posts
-    refreshInterval: 300000      // Refresh interval (ms)
+new LinkedInFeedClient('container-id', {
+    postsToShow: 3,                     // Number of posts
+    companyUrl: 'https://www.linkedin.com/company/27br/',
+    carousel: true,                     // Enable carousel
+    carouselInterval: 5000,             // Rotate every 5 seconds
+    autoRefresh: true,                  // Auto-refresh posts
+    refreshInterval: 300000,            // Refresh every 5 minutes
+    fallbackData: '/components/linkedin-feed/data/posts.json'
 });
 ```
 
-## 🎯 Integration Examples
+---
 
-### For Root Pages (home.html)
+## 📦 Files
 
-```html
-<link rel="stylesheet" href="/components/linkedin-feed/linkedin-feed.css">
-<script src="/components/linkedin-feed/linkedin-feed.js"></script>
-<script>
-    new LinkedInFeed('linkedin-feed-container', {
-        dataSource: '/components/linkedin-feed/data/posts.json'
-    });
-</script>
 ```
-
-### For Focus Area Pages (focus-areas/*/index.html)
-
-```html
-<link rel="stylesheet" href="../../components/linkedin-feed/linkedin-feed.css">
-<script src="../../components/linkedin-feed/linkedin-feed.js"></script>
-<script>
-    new LinkedInFeed('linkedin-feed-container', {
-        dataSource: '../../components/linkedin-feed/data/posts.json',
-        postsToShow: 3
-    });
-</script>
+linkedin-feed/
+├── linkedin-feed-client.js    # ✅ Auto-fetch (GitHub Pages)
+├── linkedin-feed.js           # Static mode
+├── linkedin-feed-dynamic.js   # Server mode
+├── linkedin-feed.css          # Base styles
+├── linkedin-feed-carousel.css # Carousel styles
+└── data/posts.json            # Fallback data
 ```
-
-## 📝 Features
-
-- ✅ Self-contained module
-- ✅ No external dependencies
-- ✅ Responsive design
-- ✅ Easy integration
-- ✅ Customizable styling
-- ✅ Sample data included
-
-## 🔧 Customization
-
-All styles are in `linkedin-feed.css`. Customize colors, spacing, and layout as needed.
-
-## 📄 License
-
-Part of BR27 website project.
 
 ---
 
-**For detailed documentation, see `docs/` folder.**
+## 🎯 How It Works
 
+1. **Tries to fetch** from LinkedIn RSS via RSS2JSON API
+2. **If successful**: Shows live LinkedIn posts
+3. **If fails**: Uses fallback data from `posts.json`
+4. **Auto-refreshes** every 5 minutes (optional)
+
+---
+
+## 📝 Documentation
+
+- **Quick Start**: `docs/QUICK_START.md`
+- **Integration Guide**: `docs/INTEGRATION_GUIDE.md`
+- **Dynamic Setup**: `DYNAMIC_SETUP_GUIDE.md`
+
+---
+
+**Recommended**: Use `linkedin-feed-client.js` for automatic fetching on GitHub Pages!
