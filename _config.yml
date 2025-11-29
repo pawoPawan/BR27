@@ -6,6 +6,7 @@ exclude:
   - DEPLOYMENT_NOTES.md
   - MIGRATION_GUIDE.md
   - ARCHITECTURE.md
+  - QUICK_START.md
   - overview.txt
   - deploy-github.sh
   - setup.sh
