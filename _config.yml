@@ -1,0 +1,39 @@
+# GitHub Pages / Jekyll Configuration for BR27
+
+# Exclude files from Jekyll processing
+exclude:
+  - README.md
+  - DEPLOYMENT_NOTES.md
+  - overview.txt
+  - deploy-github.sh
+  - setup.sh
+  - .gitignore
+  - .server.log
+  - django/
+  - components/linkedin-feed/docs/
+  - components/linkedin-feed/DYNAMIC_SETUP_GUIDE.md
+  - components/linkedin-feed/README.md
+  - components/linkedin-feed/scripts/
+  - docs/
+  - .github/
+
+# Don't process these as Jekyll pages
+markdown: kramdown
+highlighter: rouge
+
+# Keep only HTML, CSS, JS files for the actual website
+include:
+  - .htaccess
+  - _pages
+
+# Site settings
+title: BR27
+description: Empowering minds. Enabling progress.
+url: "https://br27.in"
+baseurl: ""
+
+# Build settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
