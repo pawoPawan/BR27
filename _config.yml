@@ -4,12 +4,16 @@
 exclude:
   - README.md
   - DEPLOYMENT_NOTES.md
+  - MIGRATION_GUIDE.md
+  - ARCHITECTURE.md
   - overview.txt
   - deploy-github.sh
   - setup.sh
   - .gitignore
   - .server.log
   - django/
+  - templates/
+  - scripts/
   - components/linkedin-feed/docs/
   - components/linkedin-feed/DYNAMIC_SETUP_GUIDE.md
   - components/linkedin-feed/README.md

@@ -40,19 +40,53 @@
     </div>
 </section>
 
-<!-- LinkedIn Feed Script -->
+<!-- LinkedIn Feed Script with Platform Detection -->
 <script>
     (function() {
         if (typeof LinkedInFeedClient !== 'undefined') {
             document.addEventListener('DOMContentLoaded', function() {
-                new LinkedInFeedClient('linkedin-feed-container', {
-                    postsToShow: {{ posts_count }},
-                    companyUrl: 'https://www.linkedin.com/company/27br/',
-                    carousel: {{ carousel }},
-                    carouselInterval: 5000,
-                    autoRefresh: {{ auto_refresh }},
-                    refreshInterval: 300000
-                });
+                // Load platform config for adaptive routing
+                fetch('/config/platform.json')
+                    .then(response => response.json())
+                    .then(platformConfig => {
+                        const platform = platformConfig.platform.current;
+                        const routing = platformConfig.routing[platform];
+                        const features = platformConfig.features;
+                        
+                        // Determine data source based on platform
+                        let dataSource;
+                        if (features.api_enabled && routing.api_path) {
+                            // Use Django API when available
+                            dataSource = routing.api_path + 'linkedin/posts/';
+                        } else {
+                            // Use static JSON for GitHub Pages
+                            dataSource = routing.static_path + 'components/linkedin-feed/data/posts.json';
+                        }
+                        
+                        // Initialize with platform-aware settings
+                        new LinkedInFeedClient('linkedin-feed-container', {
+                            postsToShow: {{ posts_count }},
+                            companyUrl: 'https://www.linkedin.com/company/27br/',
+                            carousel: {{ carousel }},
+                            carouselInterval: 5000,
+                            autoRefresh: {{ auto_refresh }},
+                            refreshInterval: 300000
+                        });
+                        
+                        console.log('✅ LinkedIn feed initialized for platform:', platform);
+                    })
+                    .catch(error => {
+                        // Fallback to static mode if config unavailable
+                        console.warn('⚠️ Platform config unavailable, using defaults');
+                        new LinkedInFeedClient('linkedin-feed-container', {
+                            postsToShow: {{ posts_count }},
+                            companyUrl: 'https://www.linkedin.com/company/27br/',
+                            carousel: {{ carousel }},
+                            carouselInterval: 5000,
+                            autoRefresh: {{ auto_refresh }},
+                            refreshInterval: 300000
+                        });
+                    });
             });
         }
     })();

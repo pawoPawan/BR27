@@ -1,0 +1,60 @@
+{# 
+  Django/Jinja2 Version of LinkedIn Feed Component
+  This is identical to the Jekyll version for easy migration
+#}
+
+<!-- LinkedIn Feed Section -->
+<section class="linkedin-feed-section">
+    <div class="container">
+        <div class="linkedin-header">
+            <div class="linkedin-title-group">
+                <div class="linkedin-icon">
+                    <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2>Latest from BR27</h2>
+                    <p style="color: var(--text-secondary); margin: 0; font-size: 14px;">
+                        Follow our journey on LinkedIn
+                    </p>
+                </div>
+            </div>
+            <a href="https://www.linkedin.com/company/27br/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="linkedin-follow-btn">
+                <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+                Follow on LinkedIn
+            </a>
+        </div>
+        <div id="linkedin-feed-container"></div>
+    </div>
+</section>
+
+<!-- Initialize Feed -->
+<script>
+(function() {
+    if (typeof LinkedInFeedClient !== 'undefined') {
+        document.addEventListener('DOMContentLoaded', function() {
+            // For Django: Use API endpoint
+            new LinkedInFeedClient('linkedin-feed-container', {
+                postsToShow: {{ posts_count|default:3 }},
+                companyUrl: 'https://www.linkedin.com/company/27br/',
+                carousel: {{ carousel|default:'true'|lower }},
+                carouselInterval: 5000,
+                autoRefresh: {{ auto_refresh|default:'true'|lower }},
+                refreshInterval: 300000,
+                dataSource: '{% url "linkedin_feed:fetch_posts" %}'  {# Django URL routing #}
+            });
+        });
+    }
+})();
+</script>
+

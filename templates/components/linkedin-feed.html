@@ -1,0 +1,93 @@
+{# 
+  Platform-Agnostic LinkedIn Feed Component
+  Works with both Jekyll (Liquid) and Django (Jinja2)
+  
+  Jekyll Usage: {% include components/linkedin-feed.html posts_count="3" %}
+  Django Usage: {% include "components/linkedin-feed.html" with posts_count=3 %}
+#}
+
+{% comment %}
+  Parameters:
+  - posts_count: Number of posts to show (default: 3)
+  - carousel: Enable carousel mode (default: true)
+  - auto_refresh: Auto-refresh posts (default: true)
+{% endcomment %}
+
+<!-- LinkedIn Feed Section -->
+<section class="linkedin-feed-section">
+    <div class="container">
+        <div class="linkedin-header">
+            <div class="linkedin-title-group">
+                <div class="linkedin-icon">
+                    <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2>Latest from BR27</h2>
+                    <p style="color: var(--text-secondary); margin: 0; font-size: 14px;">
+                        Follow our journey on LinkedIn
+                    </p>
+                </div>
+            </div>
+            <a href="https://www.linkedin.com/company/27br/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="linkedin-follow-btn">
+                <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+                Follow on LinkedIn
+            </a>
+        </div>
+        <div id="linkedin-feed-container"></div>
+    </div>
+</section>
+
+<!-- Initialize Feed -->
+<script>
+(function() {
+    if (typeof LinkedInFeedClient !== 'undefined') {
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load platform config
+            fetch('/config/platform.json')
+                .then(response => response.json())
+                .then(config => {
+                    const platform = config.platform.current;
+                    const feedConfig = config.routing[platform];
+                    
+                    // Determine data source based on platform
+                    const dataSource = config.features.api_enabled && feedConfig.api_path
+                        ? feedConfig.api_path + 'linkedin/posts/'
+                        : '/components/linkedin-feed/data/posts.json';
+                    
+                    new LinkedInFeedClient('linkedin-feed-container', {
+                        postsToShow: {{ include.posts_count | default: 3 }},
+                        companyUrl: 'https://www.linkedin.com/company/27br/',
+                        carousel: {{ include.carousel | default: true }},
+                        carouselInterval: 5000,
+                        autoRefresh: {{ include.auto_refresh | default: true }},
+                        refreshInterval: 300000,
+                        dataSource: dataSource
+                    });
+                })
+                .catch(error => {
+                    // Fallback if config unavailable
+                    new LinkedInFeedClient('linkedin-feed-container', {
+                        postsToShow: {{ include.posts_count | default: 3 }},
+                        companyUrl: 'https://www.linkedin.com/company/27br/',
+                        carousel: {{ include.carousel | default: true }},
+                        carouselInterval: 5000,
+                        autoRefresh: {{ include.auto_refresh | default: true }},
+                        refreshInterval: 300000
+                    });
+                });
+        });
+    }
+})();
+</script>
+

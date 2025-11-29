@@ -1,0 +1,26 @@
+{
+  "platform": {
+    "current": "github",
+    "options": ["github", "django", "vercel", "netlify"]
+  },
+  "routing": {
+    "github": {
+      "base_url": "/",
+      "static_path": "/",
+      "api_path": null,
+      "template_engine": "jekyll"
+    },
+    "django": {
+      "base_url": "/",
+      "static_path": "/static/",
+      "api_path": "/api/",
+      "template_engine": "jinja2"
+    }
+  },
+  "features": {
+    "api_enabled": false,
+    "use_static_fallback": true,
+    "cdn_enabled": false
+  }
+}
+
