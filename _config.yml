@@ -29,7 +29,7 @@ include:
 # Site settings
 title: BR27
 description: Empowering minds. Enabling progress.
-url: "https://br27.in"
+url: "https://www.br27.in"
 baseurl: ""
 
 # Build settings
